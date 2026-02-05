@@ -1,0 +1,12 @@
+C:\Users\ostry\source\repos\MatrixOfCalculator\bin\Debug\.editorconfig
+C:\Users\ostry\source\repos\MatrixOfCalculator\bin\Debug\MatrixOfCalculator.exe.config
+C:\Users\ostry\source\repos\MatrixOfCalculator\bin\Debug\MatrixOfCalculator.exe
+C:\Users\ostry\source\repos\MatrixOfCalculator\bin\Debug\MatrixOfCalculator.pdb
+C:\Users\ostry\source\repos\MatrixOfCalculator\obj\Debug\MatrixOfCalculator.csproj.AssemblyReference.cache
+C:\Users\ostry\source\repos\MatrixOfCalculator\obj\Debug\MatrixOfCalculator.Forms.MatrixCalculation.resources
+C:\Users\ostry\source\repos\MatrixOfCalculator\obj\Debug\MatrixOfCalculator.Properties.Resources.resources
+C:\Users\ostry\source\repos\MatrixOfCalculator\obj\Debug\MatrixOfCalculator.csproj.GenerateResource.cache
+C:\Users\ostry\source\repos\MatrixOfCalculator\obj\Debug\MatrixOfCalculator.csproj.CoreCompileInputs.cache
+C:\Users\ostry\source\repos\MatrixOfCalculator\obj\Debug\MatrixOfCalculator.exe
+C:\Users\ostry\source\repos\MatrixOfCalculator\obj\Debug\MatrixOfCalculator.pdb
+C:\Users\ostry\source\repos\MatrixOfCalculator\bin\Debug\source\close.png
