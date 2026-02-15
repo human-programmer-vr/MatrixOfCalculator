@@ -55,9 +55,9 @@ namespace MatrixOfCalculator.Classes
             output.Clear();
             _stringBuilder.Clear();
 
-            for (int x = 0; x < matrix.GetLength(0); x++)
+            for (short x = 0; x < matrix.GetLength(0); x++)
             {
-                for (int y = 0; y < matrix.GetLength(1); y++)
+                for (short y = 0; y < matrix.GetLength(1); y++)
                 {
                     _stringBuilder.Append(matrix[x, y].ToString("F2") + "\t");
                 }
@@ -75,4 +75,5 @@ namespace MatrixOfCalculator.Classes
             MessageBox.Show("Производятся вычисления!", "Уведомление", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
+
 }
