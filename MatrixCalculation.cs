@@ -7,7 +7,7 @@ namespace MatrixOfCalculator.Forms
 {
     public partial class MatrixCalculation : Form
     {
-        private double[,] _matrixOne, _matrixTwo, _temp;
+        private short[,] _matrixOne, _matrixTwo, _temp;
 
         public MatrixCalculation()
         {
@@ -73,19 +73,19 @@ namespace MatrixOfCalculator.Forms
                 {
                     if (sizeTwoOnTwo.Checked)
                     {
-                        AutomaticsInputDataToMatrix.AutoInput(_matrixOne = new double[2, 2]);
+                        AutomaticsInputDataToMatrix.AutoInput(_matrixOne = new short[2, 2]);
                         WorkWithForms.SetForm(currentDesign: gHomeWindow, chooseDesign: gOperationMatrix);
                     }
 
                     if (sizeThreeToThree.Checked)
                     {
-                        AutomaticsInputDataToMatrix.AutoInput(_matrixOne = new double[3, 3]);
+                        AutomaticsInputDataToMatrix.AutoInput(_matrixOne = new short[3, 3]);
                         WorkWithForms.SetForm(currentDesign: gHomeWindow, chooseDesign: gOperationMatrix);
                     }
 
                     if (sizeFourToFour.Checked)
                     {
-                        AutomaticsInputDataToMatrix.AutoInput(_matrixOne = new double[4, 4]);
+                        AutomaticsInputDataToMatrix.AutoInput(_matrixOne = new short[4, 4]);
                         WorkWithForms.SetForm(currentDesign: gHomeWindow, chooseDesign: gOperationMatrix);
                     }
                 }
@@ -111,24 +111,24 @@ namespace MatrixOfCalculator.Forms
                 {
                     if (sizeTwoOnTwo.Checked)
                     {
-                        AutomaticsInputDataToMatrix.AutoInput(_matrixOne = new double[2, 2]);
-                        AutomaticsInputDataToMatrix.AutoInput(_matrixTwo = new double[2, 2]);
+                        AutomaticsInputDataToMatrix.AutoInput(_matrixOne = new short[2, 2]);
+                        AutomaticsInputDataToMatrix.AutoInput(_matrixTwo = new short[2, 2]);
 
                         WorkWithForms.SetForm(currentDesign: gHomeWindow, chooseDesign: gOperationMatrix);
                     }
 
                     if (sizeThreeToThree.Checked)
                     {
-                        AutomaticsInputDataToMatrix.AutoInput(_matrixOne = new double[3, 3]);
-                        AutomaticsInputDataToMatrix.AutoInput(_matrixTwo = new double[3, 3]);
+                        AutomaticsInputDataToMatrix.AutoInput(_matrixOne = new short[3, 3]);
+                        AutomaticsInputDataToMatrix.AutoInput(_matrixTwo = new short[3, 3]);
 
                         WorkWithForms.SetForm(currentDesign: gHomeWindow, chooseDesign: gOperationMatrix);
                     }
 
                     if (sizeFourToFour.Checked)
                     {
-                        AutomaticsInputDataToMatrix.AutoInput(_matrixOne = new double[4, 4]);
-                        AutomaticsInputDataToMatrix.AutoInput(_matrixTwo = new double[4, 4]);
+                        AutomaticsInputDataToMatrix.AutoInput(_matrixOne = new short[4, 4]);
+                        AutomaticsInputDataToMatrix.AutoInput(_matrixTwo = new short[4, 4]);
 
                         WorkWithForms.SetForm(currentDesign: gHomeWindow, chooseDesign: gOperationMatrix);
                     }
@@ -155,7 +155,7 @@ namespace MatrixOfCalculator.Forms
         {
             if (bCreateMatrix.BackColor == Color.FromArgb(192, 255, 192))
             {
-                OperationWithMatrix.HandleInput(_matrixOne = new double[2, 2], tInput1.Text.CheckIntOrDefault(), tInput2.Text.CheckIntOrDefault(),
+                OperationWithMatrix.HandleInput(_matrixOne = new short[2, 2], tInput1.Text.CheckIntOrDefault(), tInput2.Text.CheckIntOrDefault(),
                     tInput3.Text.CheckIntOrDefault(), tInput4.Text.CheckIntOrDefault());
 
                 UtilityTools.ClearInput(tInput1, tInput2, tInput3, tInput4);
@@ -167,7 +167,7 @@ namespace MatrixOfCalculator.Forms
             {
                 if (_matrixOne == null)
                 {
-                    OperationWithMatrix.HandleInput(_matrixOne = new double[2, 2], tInput1.Text.CheckIntOrDefault(), tInput2.Text.CheckIntOrDefault(),
+                    OperationWithMatrix.HandleInput(_matrixOne = new short[2, 2], tInput1.Text.CheckIntOrDefault(), tInput2.Text.CheckIntOrDefault(),
                         tInput3.Text.CheckIntOrDefault(), tInput4.Text.CheckIntOrDefault());
 
                     UtilityTools.ClearInput(tInput1, tInput2, tInput3, tInput4);
@@ -178,7 +178,7 @@ namespace MatrixOfCalculator.Forms
 
                 if (UtilityTools.CheckExistData(_matrixOne) != _matrixOne.Length)
                 {
-                    OperationWithMatrix.HandleInput(_matrixTwo = new double[2, 2], tInput1.Text.CheckIntOrDefault(), tInput2.Text.CheckIntOrDefault(),
+                    OperationWithMatrix.HandleInput(_matrixTwo = new short[2, 2], tInput1.Text.CheckIntOrDefault(), tInput2.Text.CheckIntOrDefault(),
                         tInput3.Text.CheckIntOrDefault(), tInput4.Text.CheckIntOrDefault());
 
                     UtilityTools.ClearInput(tInput1, tInput2, tInput3, tInput4);
@@ -194,7 +194,7 @@ namespace MatrixOfCalculator.Forms
         {
             if (bCreateMatrix.BackColor == Color.FromArgb(192, 255, 192))
             {
-                OperationWithMatrix.HandleInput(_matrixOne = new double[3, 3], textBox1.Text.CheckIntOrDefault(), textBox2.Text.CheckIntOrDefault(), textBox3.Text.CheckIntOrDefault(),
+                OperationWithMatrix.HandleInput(_matrixOne = new short[3, 3], textBox1.Text.CheckIntOrDefault(), textBox2.Text.CheckIntOrDefault(), textBox3.Text.CheckIntOrDefault(),
                     textBox4.Text.CheckIntOrDefault(), textBox5.Text.CheckIntOrDefault(), textBox6.Text.CheckIntOrDefault(), textBox7.Text.CheckIntOrDefault(),
                     textBox8.Text.CheckIntOrDefault(), textBox9.Text.CheckIntOrDefault());
 
@@ -207,7 +207,7 @@ namespace MatrixOfCalculator.Forms
             {
                 if (_matrixOne == null)
                 {
-                    OperationWithMatrix.HandleInput(_matrixOne = new double[3, 3], textBox1.Text.CheckIntOrDefault(), textBox2.Text.CheckIntOrDefault(), textBox3.Text.CheckIntOrDefault(),
+                    OperationWithMatrix.HandleInput(_matrixOne = new short[3, 3], textBox1.Text.CheckIntOrDefault(), textBox2.Text.CheckIntOrDefault(), textBox3.Text.CheckIntOrDefault(),
                         textBox4.Text.CheckIntOrDefault(), textBox5.Text.CheckIntOrDefault(), textBox6.Text.CheckIntOrDefault(), textBox7.Text.CheckIntOrDefault(),
                         textBox8.Text.CheckIntOrDefault(), textBox9.Text.CheckIntOrDefault());
 
@@ -219,7 +219,7 @@ namespace MatrixOfCalculator.Forms
 
                 if (UtilityTools.CheckExistData(_matrixOne) != _matrixOne.Length)
                 {
-                    OperationWithMatrix.HandleInput(_matrixTwo = new double[3, 3], textBox1.Text.CheckIntOrDefault(), textBox2.Text.CheckIntOrDefault(), textBox3.Text.CheckIntOrDefault(),
+                    OperationWithMatrix.HandleInput(_matrixTwo = new short[3, 3], textBox1.Text.CheckIntOrDefault(), textBox2.Text.CheckIntOrDefault(), textBox3.Text.CheckIntOrDefault(),
                         textBox4.Text.CheckIntOrDefault(), textBox5.Text.CheckIntOrDefault(), textBox6.Text.CheckIntOrDefault(), textBox7.Text.CheckIntOrDefault(),
                         textBox8.Text.CheckIntOrDefault(), textBox9.Text.CheckIntOrDefault());
 
@@ -236,7 +236,7 @@ namespace MatrixOfCalculator.Forms
         {
             if (bCreateMatrix.BackColor == Color.FromArgb(192, 255, 192))
             {
-                OperationWithMatrix.HandleInput(_matrixOne = new double[4, 4], textBox10.Text.CheckIntOrDefault(), textBox11.Text.CheckIntOrDefault(), textBox12.Text.CheckIntOrDefault(),
+                OperationWithMatrix.HandleInput(_matrixOne = new short[4, 4], textBox10.Text.CheckIntOrDefault(), textBox11.Text.CheckIntOrDefault(), textBox12.Text.CheckIntOrDefault(),
                     textBox13.Text.CheckIntOrDefault(), textBox14.Text.CheckIntOrDefault(), textBox15.Text.CheckIntOrDefault(), textBox16.Text.CheckIntOrDefault(),
                     textBox17.Text.CheckIntOrDefault(), textBox18.Text.CheckIntOrDefault(), textBox19.Text.CheckIntOrDefault(), textBox20.Text.CheckIntOrDefault(),
                     textBox21.Text.CheckIntOrDefault(), textBox22.Text.CheckIntOrDefault(), textBox23.Text.CheckIntOrDefault(), textBox24.Text.CheckIntOrDefault(),
@@ -252,7 +252,7 @@ namespace MatrixOfCalculator.Forms
             {
                 if (_matrixOne == null)
                 {
-                    OperationWithMatrix.HandleInput(_matrixOne = new double[4, 4], textBox10.Text.CheckIntOrDefault(), textBox11.Text.CheckIntOrDefault(), textBox12.Text.CheckIntOrDefault(),
+                    OperationWithMatrix.HandleInput(_matrixOne = new short[4, 4], textBox10.Text.CheckIntOrDefault(), textBox11.Text.CheckIntOrDefault(), textBox12.Text.CheckIntOrDefault(),
                         textBox13.Text.CheckIntOrDefault(), textBox14.Text.CheckIntOrDefault(), textBox15.Text.CheckIntOrDefault(), textBox16.Text.CheckIntOrDefault(),
                         textBox17.Text.CheckIntOrDefault(), textBox18.Text.CheckIntOrDefault(), textBox19.Text.CheckIntOrDefault(), textBox20.Text.CheckIntOrDefault(),
                         textBox21.Text.CheckIntOrDefault(), textBox22.Text.CheckIntOrDefault(), textBox23.Text.CheckIntOrDefault(), textBox24.Text.CheckIntOrDefault(),
@@ -268,7 +268,7 @@ namespace MatrixOfCalculator.Forms
 
                 if (UtilityTools.CheckExistData(_matrixOne) != _matrixOne.Length)
                 {
-                    OperationWithMatrix.HandleInput(_matrixTwo = new double[4, 4], textBox10.Text.CheckIntOrDefault(), textBox11.Text.CheckIntOrDefault(), textBox12.Text.CheckIntOrDefault(),
+                    OperationWithMatrix.HandleInput(_matrixTwo = new short[4, 4], textBox10.Text.CheckIntOrDefault(), textBox11.Text.CheckIntOrDefault(), textBox12.Text.CheckIntOrDefault(),
                         textBox13.Text.CheckIntOrDefault(), textBox14.Text.CheckIntOrDefault(), textBox15.Text.CheckIntOrDefault(), textBox16.Text.CheckIntOrDefault(),
                         textBox17.Text.CheckIntOrDefault(), textBox18.Text.CheckIntOrDefault(), textBox19.Text.CheckIntOrDefault(), textBox20.Text.CheckIntOrDefault(),
                         textBox21.Text.CheckIntOrDefault(), textBox22.Text.CheckIntOrDefault(), textBox23.Text.CheckIntOrDefault(), textBox24.Text.CheckIntOrDefault(),
@@ -411,4 +411,5 @@ namespace MatrixOfCalculator.Forms
             Validation.OnlyNumbers(sender, e);
         }
     }
+
 }
