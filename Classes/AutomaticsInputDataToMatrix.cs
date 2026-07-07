@@ -6,11 +6,6 @@ namespace MatrixOfCalculator.Classes
     {
         private static Random _rand = new Random();
 
-        /// <summary>
-        /// Автоматическое заполнение массива данными
-        /// </summary>
-        /// <param name="matrix"></param>
-        /// <returns></returns>
         public static float[,] AutoInput(float[,] matrix)
         {
             for (short x = 0; x < matrix.GetLength(0); x++)

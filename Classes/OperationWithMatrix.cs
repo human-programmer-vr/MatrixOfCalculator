@@ -4,12 +4,6 @@
     {
         private static float[,] _temp;
 
-        /// <summary>
-        /// Заполнение данных матрицы через ручной ввод данных
-        /// </summary>
-        /// <param name="matrix"></param>
-        /// <param name="input"></param>
-        /// <returns></returns>
         public static float[,] HandleInput(float[,] matrix, params float[] input)
         {
             for (short x = 0, index = 0; x < matrix.GetLength(0); x++)
@@ -19,12 +13,6 @@
             return matrix;
         }
 
-        /// <summary>
-        /// Умножает матрицу на введённое число
-        /// </summary>
-        /// <param name="matrix"></param>
-        /// <param name="multiplicate"></param>
-        /// <returns></returns>
         public static float[,] MultiplicateNumberOnMatrix(float[,] matrix, byte multiplicate)
         {
             _temp = new float[matrix.GetLength(0), matrix.GetLength(1)];
@@ -36,21 +24,11 @@
             return _temp;
         }
 
-        /// <summary>
-        /// Находит определитель матрицы 2-го порядка
-        /// </summary>
-        /// <param name="matrix"></param>
-        /// <returns></returns>
         private static short FindDeterminantTwoOnTwo(float[,] matrix)
         {
             return (short)((matrix[0, 0] * matrix[1, 1]) - (matrix[0, 1] * matrix[1, 0]));
         }
 
-        /// <summary>
-        /// Находит определитель матрицы 3-го порядка
-        /// </summary>
-        /// <param name="matrix"></param>
-        /// <returns></returns>
         private static float FindDeterminantThreeOnThree(float[,] matrix)
         {
             return
@@ -62,11 +40,6 @@
                 matrix[1, 2] * matrix[2, 1] * matrix[0, 0]);
         }
 
-        /// <summary>
-        /// Находит обратную матрицу
-        /// </summary>
-        /// <param name="matrix"></param>
-        /// <returns></returns>
         public static float[,] ReverseMatrix(float[,] matrix, float determinant = 0)
         {
             _temp = new float[matrix.GetLength(0), matrix.GetLength(1)];
@@ -121,11 +94,6 @@
             return _temp;
         }
 
-        /// <summary>
-        /// Транспонирует матрицу (меняя строки и столбцы между собой)
-        /// </summary>
-        /// <param name="matrix"></param>
-        /// <returns></returns>
         public static float[,] TransposeMatrix(float[,] matrix)
         {
             _temp = new float[matrix.GetLength(0), matrix.GetLength(1)];
@@ -137,12 +105,6 @@
             return _temp;
         }
 
-        /// <summary>
-        /// Складывает элементы матрицы между собой
-        /// </summary>
-        /// <param name="matrixOne"></param>
-        /// <param name="matrixTwo"></param>
-        /// <returns></returns>
         public static float[,] AdditionMatrix(float[,] matrixOne, float[,] matrixTwo)
         {
             _temp = new float[matrixOne.GetLength(0), matrixOne.GetLength(1)];
@@ -154,12 +116,6 @@
             return _temp;
         }
 
-        /// <summary>
-        /// Вычитает элементы матрицы между собой
-        /// </summary>
-        /// <param name="matrixOne"></param>
-        /// <param name="matrixTwo"></param>
-        /// <returns></returns>
         public static float[,] SubstractionMatrix(float[,] matrixOne, float[,] matrixTwo)
         {
             _temp = new float[matrixOne.GetLength(0), matrixOne.GetLength(1)];
@@ -171,12 +127,6 @@
             return _temp;
         }
 
-        /// <summary>
-        /// Умножает элементы матрицы между собой
-        /// </summary>
-        /// <param name="matrixOne"></param>
-        /// <param name="matrixTwo"></param>
-        /// <returns></returns>
         public static float[,] MultiplicateMatrix(float[,] matrixOne, float[,] matrixTwo)
         {
             _temp = new float[matrixOne.GetLength(0), matrixOne.GetLength(1)];

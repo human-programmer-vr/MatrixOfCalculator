@@ -1,0 +1,11 @@
+* text=auto
+*.cs text diff=csharp
+*.config text
+*.manifest text
+*.json text
+*.xml text
+*.sql text
+*.md text
+*.txt text
+*.csproj text
+*.sln text eol=crlf

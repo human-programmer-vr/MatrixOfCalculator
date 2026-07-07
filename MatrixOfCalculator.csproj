@@ -60,9 +60,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\AutomaticsInputDataToMatrix.cs" />
+    <Compile Include="InputAndOutputDataToMatrix.cs" />
     <Compile Include="Classes\UtilityTools.cs" />
-    <Compile Include="Classes\OperationWithMatrix.cs" />
+    <Compile Include="Matrix.cs" />
     <Compile Include="Classes\Validation.cs" />
     <Compile Include="MatrixCalculation.cs">
       <SubType>Form</SubType>
@@ -72,7 +72,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Classes\WorkWithForms.cs" />
+    <Compile Include="Classes\Navigation.cs" />
     <EmbeddedResource Include="MatrixCalculation.resx">
       <DependentUpon>MatrixCalculation.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,7 +100,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="source\close.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
