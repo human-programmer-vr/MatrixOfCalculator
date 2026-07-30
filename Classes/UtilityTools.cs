@@ -1,5 +1,4 @@
 ﻿using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace MatrixOfCalculator.Classes
@@ -9,6 +8,23 @@ namespace MatrixOfCalculator.Classes
         public static void SetColorForButton(Button button)
         {
             button.BackColor = button.BackColor.Name.StartsWith("White") ? Color.FromArgb(192, 255, 192) : Color.White;
+        }
+
+        public static void ResetColorForButton(Button button)
+        {
+            button.BackColor = Color.White;
+        }
+
+        public static void SetMaxLengthFieldInput(int length, params TextBox[] inputs)
+        {
+            foreach (var input in inputs)
+                input.MaxLength = length;
+        }
+
+        public static void SetDefaultToggles(params RadioButton[] switches)
+        {
+            foreach (var toggle in switches)
+                toggle.Checked = false;
         }
 
         public static void ClearInput(params TextBox[] inputField)
@@ -25,12 +41,6 @@ namespace MatrixOfCalculator.Classes
                         indicator++;
 
             return indicator;
-        }
-
-
-        public static void Notification()
-        {
-            MessageBox.Show("Производятся вычисления!", "Уведомление", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

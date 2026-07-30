@@ -31,10 +31,10 @@
             this.CreateBothMatrix = new System.Windows.Forms.Button();
             this.CreateMatrix = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.pCloseWindow = new System.Windows.Forms.PictureBox();
+            this.CloseWindow = new System.Windows.Forms.PictureBox();
             this.bNext = new System.Windows.Forms.Button();
             this.gHomeWindow = new System.Windows.Forms.GroupBox();
-            this.gInputDataToMatrixTwoOnTwo = new System.Windows.Forms.GroupBox();
+            this.InputDataToMatrixTwoOnTwo = new System.Windows.Forms.GroupBox();
             this.tInput4 = new System.Windows.Forms.TextBox();
             this.tInput3 = new System.Windows.Forms.TextBox();
             this.tInput2 = new System.Windows.Forms.TextBox();
@@ -47,19 +47,19 @@
             this.sizeFourToFour = new System.Windows.Forms.RadioButton();
             this.sizeThreeToThree = new System.Windows.Forms.RadioButton();
             this.sizeTwoOnTwo = new System.Windows.Forms.RadioButton();
-            this.gInputDataToMatrixThreeOnThree = new System.Windows.Forms.GroupBox();
-            this.gResultCalculation = new System.Windows.Forms.GroupBox();
-            this.tOutputData = new System.Windows.Forms.TextBox();
+            this.InputDataToMatrixThreeOnThree = new System.Windows.Forms.GroupBox();
+            this.ResultCalculation = new System.Windows.Forms.GroupBox();
+            this.OutputData = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.gOperationMatrix = new System.Windows.Forms.GroupBox();
-            this.pOperationsWithOneMatrix = new System.Windows.Forms.Panel();
-            this.tInputField = new System.Windows.Forms.TextBox();
-            this.bTransposeMatrix = new System.Windows.Forms.Button();
-            this.bFindReverseMatrix = new System.Windows.Forms.Button();
+            this.OperationMatrix = new System.Windows.Forms.GroupBox();
+            this.OperationsWithOneMatrix = new System.Windows.Forms.Panel();
+            this.InputField = new System.Windows.Forms.TextBox();
+            this.TransposeMatrix = new System.Windows.Forms.Button();
+            this.FindReverseMatrix = new System.Windows.Forms.Button();
             this.bMultiplicationMatrixOnNumber = new System.Windows.Forms.Button();
-            this.gInputDataToMatrixFourOnFour = new System.Windows.Forms.GroupBox();
+            this.InputDataToMatrixFourOnFour = new System.Windows.Forms.GroupBox();
             this.textBox25 = new System.Windows.Forms.TextBox();
             this.textBox24 = new System.Windows.Forms.TextBox();
             this.textBox23 = new System.Windows.Forms.TextBox();
@@ -77,10 +77,10 @@
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.pOperationsWithTwoMatrix = new System.Windows.Forms.Panel();
-            this.bMultiplicateMatrix = new System.Windows.Forms.Button();
-            this.bSubtractionMatrix = new System.Windows.Forms.Button();
-            this.bAdditionMatrix = new System.Windows.Forms.Button();
+            this.OperationsWithTwoMatrix = new System.Windows.Forms.Panel();
+            this.MultiplicateMatrix = new System.Windows.Forms.Button();
+            this.SubtractionMatrix = new System.Windows.Forms.Button();
+            this.AdditionMatrix = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -91,17 +91,17 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.bBack = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pCloseWindow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CloseWindow)).BeginInit();
             this.gHomeWindow.SuspendLayout();
-            this.gInputDataToMatrixTwoOnTwo.SuspendLayout();
+            this.InputDataToMatrixTwoOnTwo.SuspendLayout();
             this.pChooseTypeInput.SuspendLayout();
             this.pChooseSizeMatrix.SuspendLayout();
-            this.gInputDataToMatrixThreeOnThree.SuspendLayout();
-            this.gResultCalculation.SuspendLayout();
-            this.gOperationMatrix.SuspendLayout();
-            this.pOperationsWithOneMatrix.SuspendLayout();
-            this.gInputDataToMatrixFourOnFour.SuspendLayout();
-            this.pOperationsWithTwoMatrix.SuspendLayout();
+            this.InputDataToMatrixThreeOnThree.SuspendLayout();
+            this.ResultCalculation.SuspendLayout();
+            this.OperationMatrix.SuspendLayout();
+            this.OperationsWithOneMatrix.SuspendLayout();
+            this.InputDataToMatrixFourOnFour.SuspendLayout();
+            this.OperationsWithTwoMatrix.SuspendLayout();
             this.SuspendLayout();
             // 
             // CreateBothMatrix
@@ -138,24 +138,24 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Калькулятор для работы с матрицами";
             // 
-            // pCloseWindow
+            // CloseWindow
             // 
-            this.pCloseWindow.BackColor = System.Drawing.Color.Transparent;
-            this.pCloseWindow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pCloseWindow.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pCloseWindow.Image = global::MatrixOfCalculator.Properties.Resources.close;
-            this.pCloseWindow.Location = new System.Drawing.Point(12, 24);
-            this.pCloseWindow.Name = "pCloseWindow";
-            this.pCloseWindow.Size = new System.Drawing.Size(40, 44);
-            this.pCloseWindow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pCloseWindow.TabIndex = 9;
-            this.pCloseWindow.TabStop = false;
+            this.CloseWindow.BackColor = System.Drawing.Color.Transparent;
+            this.CloseWindow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.CloseWindow.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CloseWindow.Image = global::MatrixOfCalculator.Properties.Resources.close;
+            this.CloseWindow.Location = new System.Drawing.Point(12, 24);
+            this.CloseWindow.Name = "CloseWindow";
+            this.CloseWindow.Size = new System.Drawing.Size(40, 44);
+            this.CloseWindow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.CloseWindow.TabIndex = 9;
+            this.CloseWindow.TabStop = false;
             // 
             // bNext
             // 
             this.bNext.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bNext.Location = new System.Drawing.Point(613, 430);
+            this.bNext.Location = new System.Drawing.Point(586, 429);
             this.bNext.Name = "bNext";
             this.bNext.Size = new System.Drawing.Size(116, 36);
             this.bNext.TabIndex = 5;
@@ -165,10 +165,10 @@
             // 
             // gHomeWindow
             // 
-            this.gHomeWindow.Controls.Add(this.gInputDataToMatrixTwoOnTwo);
+            this.gHomeWindow.Controls.Add(this.InputDataToMatrixTwoOnTwo);
             this.gHomeWindow.Controls.Add(this.pChooseTypeInput);
             this.gHomeWindow.Controls.Add(this.pChooseSizeMatrix);
-            this.gHomeWindow.Controls.Add(this.gInputDataToMatrixThreeOnThree);
+            this.gHomeWindow.Controls.Add(this.InputDataToMatrixThreeOnThree);
             this.gHomeWindow.Controls.Add(this.label1);
             this.gHomeWindow.Controls.Add(this.CreateMatrix);
             this.gHomeWindow.Controls.Add(this.CreateBothMatrix);
@@ -176,24 +176,24 @@
             this.gHomeWindow.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.gHomeWindow.Location = new System.Drawing.Point(0, 0);
             this.gHomeWindow.Name = "gHomeWindow";
-            this.gHomeWindow.Size = new System.Drawing.Size(760, 408);
+            this.gHomeWindow.Size = new System.Drawing.Size(725, 408);
             this.gHomeWindow.TabIndex = 11;
             this.gHomeWindow.TabStop = false;
             // 
-            // gInputDataToMatrixTwoOnTwo
+            // InputDataToMatrixTwoOnTwo
             // 
-            this.gInputDataToMatrixTwoOnTwo.Controls.Add(this.tInput4);
-            this.gInputDataToMatrixTwoOnTwo.Controls.Add(this.tInput3);
-            this.gInputDataToMatrixTwoOnTwo.Controls.Add(this.tInput2);
-            this.gInputDataToMatrixTwoOnTwo.Controls.Add(this.tInput1);
-            this.gInputDataToMatrixTwoOnTwo.Controls.Add(this.label4);
-            this.gInputDataToMatrixTwoOnTwo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gInputDataToMatrixTwoOnTwo.Location = new System.Drawing.Point(3, 423);
-            this.gInputDataToMatrixTwoOnTwo.Name = "gInputDataToMatrixTwoOnTwo";
-            this.gInputDataToMatrixTwoOnTwo.Size = new System.Drawing.Size(754, 407);
-            this.gInputDataToMatrixTwoOnTwo.TabIndex = 19;
-            this.gInputDataToMatrixTwoOnTwo.TabStop = false;
-            this.gInputDataToMatrixTwoOnTwo.Visible = false;
+            this.InputDataToMatrixTwoOnTwo.Controls.Add(this.tInput4);
+            this.InputDataToMatrixTwoOnTwo.Controls.Add(this.tInput3);
+            this.InputDataToMatrixTwoOnTwo.Controls.Add(this.tInput2);
+            this.InputDataToMatrixTwoOnTwo.Controls.Add(this.tInput1);
+            this.InputDataToMatrixTwoOnTwo.Controls.Add(this.label4);
+            this.InputDataToMatrixTwoOnTwo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.InputDataToMatrixTwoOnTwo.Location = new System.Drawing.Point(3, 423);
+            this.InputDataToMatrixTwoOnTwo.Name = "InputDataToMatrixTwoOnTwo";
+            this.InputDataToMatrixTwoOnTwo.Size = new System.Drawing.Size(719, 407);
+            this.InputDataToMatrixTwoOnTwo.TabIndex = 19;
+            this.InputDataToMatrixTwoOnTwo.TabStop = false;
+            this.InputDataToMatrixTwoOnTwo.Visible = false;
             // 
             // tInput4
             // 
@@ -205,7 +205,7 @@
             this.tInput4.TabIndex = 4;
             this.tInput4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tInput4.UseWaitCursor = true;
-            this.tInput4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tInput1_KeyPress);
+            this.tInput4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputKeyPress);
             // 
             // tInput3
             // 
@@ -217,7 +217,7 @@
             this.tInput3.TabIndex = 3;
             this.tInput3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tInput3.UseWaitCursor = true;
-            this.tInput3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tInput1_KeyPress);
+            this.tInput3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputKeyPress);
             // 
             // tInput2
             // 
@@ -229,7 +229,7 @@
             this.tInput2.TabIndex = 2;
             this.tInput2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tInput2.UseWaitCursor = true;
-            this.tInput2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tInput1_KeyPress);
+            this.tInput2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputKeyPress);
             // 
             // tInput1
             // 
@@ -241,7 +241,7 @@
             this.tInput1.TabIndex = 1;
             this.tInput1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tInput1.UseWaitCursor = true;
-            this.tInput1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tInput1_KeyPress);
+            this.tInput1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputKeyPress);
             // 
             // label4
             // 
@@ -332,55 +332,55 @@
             this.sizeTwoOnTwo.Text = "Размерность 2×2";
             this.sizeTwoOnTwo.UseVisualStyleBackColor = true;
             // 
-            // gInputDataToMatrixThreeOnThree
+            // InputDataToMatrixThreeOnThree
             // 
-            this.gInputDataToMatrixThreeOnThree.Controls.Add(this.gResultCalculation);
-            this.gInputDataToMatrixThreeOnThree.Controls.Add(this.textBox9);
-            this.gInputDataToMatrixThreeOnThree.Controls.Add(this.textBox7);
-            this.gInputDataToMatrixThreeOnThree.Controls.Add(this.gOperationMatrix);
-            this.gInputDataToMatrixThreeOnThree.Controls.Add(this.textBox8);
-            this.gInputDataToMatrixThreeOnThree.Controls.Add(this.textBox6);
-            this.gInputDataToMatrixThreeOnThree.Controls.Add(this.textBox5);
-            this.gInputDataToMatrixThreeOnThree.Controls.Add(this.textBox1);
-            this.gInputDataToMatrixThreeOnThree.Controls.Add(this.textBox2);
-            this.gInputDataToMatrixThreeOnThree.Controls.Add(this.textBox3);
-            this.gInputDataToMatrixThreeOnThree.Controls.Add(this.textBox4);
-            this.gInputDataToMatrixThreeOnThree.Controls.Add(this.label5);
-            this.gInputDataToMatrixThreeOnThree.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gInputDataToMatrixThreeOnThree.Location = new System.Drawing.Point(3, 18);
-            this.gInputDataToMatrixThreeOnThree.Name = "gInputDataToMatrixThreeOnThree";
-            this.gInputDataToMatrixThreeOnThree.Size = new System.Drawing.Size(754, 405);
-            this.gInputDataToMatrixThreeOnThree.TabIndex = 21;
-            this.gInputDataToMatrixThreeOnThree.TabStop = false;
-            this.gInputDataToMatrixThreeOnThree.Visible = false;
+            this.InputDataToMatrixThreeOnThree.Controls.Add(this.ResultCalculation);
+            this.InputDataToMatrixThreeOnThree.Controls.Add(this.textBox9);
+            this.InputDataToMatrixThreeOnThree.Controls.Add(this.textBox7);
+            this.InputDataToMatrixThreeOnThree.Controls.Add(this.OperationMatrix);
+            this.InputDataToMatrixThreeOnThree.Controls.Add(this.textBox8);
+            this.InputDataToMatrixThreeOnThree.Controls.Add(this.textBox6);
+            this.InputDataToMatrixThreeOnThree.Controls.Add(this.textBox5);
+            this.InputDataToMatrixThreeOnThree.Controls.Add(this.textBox1);
+            this.InputDataToMatrixThreeOnThree.Controls.Add(this.textBox2);
+            this.InputDataToMatrixThreeOnThree.Controls.Add(this.textBox3);
+            this.InputDataToMatrixThreeOnThree.Controls.Add(this.textBox4);
+            this.InputDataToMatrixThreeOnThree.Controls.Add(this.label5);
+            this.InputDataToMatrixThreeOnThree.Dock = System.Windows.Forms.DockStyle.Top;
+            this.InputDataToMatrixThreeOnThree.Location = new System.Drawing.Point(3, 18);
+            this.InputDataToMatrixThreeOnThree.Name = "InputDataToMatrixThreeOnThree";
+            this.InputDataToMatrixThreeOnThree.Size = new System.Drawing.Size(719, 405);
+            this.InputDataToMatrixThreeOnThree.TabIndex = 21;
+            this.InputDataToMatrixThreeOnThree.TabStop = false;
+            this.InputDataToMatrixThreeOnThree.Visible = false;
             // 
-            // gResultCalculation
+            // ResultCalculation
             // 
-            this.gResultCalculation.Controls.Add(this.tOutputData);
-            this.gResultCalculation.Controls.Add(this.label3);
-            this.gResultCalculation.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gResultCalculation.Location = new System.Drawing.Point(3, 411);
-            this.gResultCalculation.Name = "gResultCalculation";
-            this.gResultCalculation.Size = new System.Drawing.Size(748, 396);
-            this.gResultCalculation.TabIndex = 16;
-            this.gResultCalculation.TabStop = false;
-            this.gResultCalculation.Visible = false;
+            this.ResultCalculation.Controls.Add(this.OutputData);
+            this.ResultCalculation.Controls.Add(this.label3);
+            this.ResultCalculation.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ResultCalculation.Location = new System.Drawing.Point(3, 411);
+            this.ResultCalculation.Name = "ResultCalculation";
+            this.ResultCalculation.Size = new System.Drawing.Size(713, 396);
+            this.ResultCalculation.TabIndex = 16;
+            this.ResultCalculation.TabStop = false;
+            this.ResultCalculation.Visible = false;
             // 
-            // tOutputData
+            // OutputData
             // 
-            this.tOutputData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.OutputData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tOutputData.Enabled = false;
-            this.tOutputData.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tOutputData.Location = new System.Drawing.Point(13, 66);
-            this.tOutputData.Multiline = true;
-            this.tOutputData.Name = "tOutputData";
-            this.tOutputData.ReadOnly = true;
-            this.tOutputData.Size = new System.Drawing.Size(213, 229);
-            this.tOutputData.TabIndex = 1;
-            this.tOutputData.TabStop = false;
-            this.tOutputData.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.OutputData.Enabled = false;
+            this.OutputData.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.OutputData.Location = new System.Drawing.Point(13, 66);
+            this.OutputData.Multiline = true;
+            this.OutputData.Name = "OutputData";
+            this.OutputData.ReadOnly = true;
+            this.OutputData.Size = new System.Drawing.Size(683, 285);
+            this.OutputData.TabIndex = 1;
+            this.OutputData.TabStop = false;
+            this.OutputData.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
             // 
@@ -402,7 +402,7 @@
             this.textBox9.TabIndex = 9;
             this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox9.UseWaitCursor = true;
-            this.textBox9.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tInput1_KeyPress);
+            this.textBox9.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputKeyPress);
             // 
             // textBox7
             // 
@@ -414,69 +414,67 @@
             this.textBox7.TabIndex = 7;
             this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox7.UseWaitCursor = true;
-            this.textBox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tInput1_KeyPress);
+            this.textBox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputKeyPress);
             // 
-            // gOperationMatrix
+            // OperationMatrix
             // 
-            this.gOperationMatrix.Controls.Add(this.pOperationsWithOneMatrix);
-            this.gOperationMatrix.Controls.Add(this.gInputDataToMatrixFourOnFour);
-            this.gOperationMatrix.Controls.Add(this.pOperationsWithTwoMatrix);
-            this.gOperationMatrix.Controls.Add(this.label2);
-            this.gOperationMatrix.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gOperationMatrix.Location = new System.Drawing.Point(3, 18);
-            this.gOperationMatrix.Name = "gOperationMatrix";
-            this.gOperationMatrix.Size = new System.Drawing.Size(748, 393);
-            this.gOperationMatrix.TabIndex = 12;
-            this.gOperationMatrix.TabStop = false;
-            this.gOperationMatrix.Visible = false;
+            this.OperationMatrix.Controls.Add(this.OperationsWithOneMatrix);
+            this.OperationMatrix.Controls.Add(this.InputDataToMatrixFourOnFour);
+            this.OperationMatrix.Controls.Add(this.OperationsWithTwoMatrix);
+            this.OperationMatrix.Controls.Add(this.label2);
+            this.OperationMatrix.Dock = System.Windows.Forms.DockStyle.Top;
+            this.OperationMatrix.Location = new System.Drawing.Point(3, 18);
+            this.OperationMatrix.Name = "OperationMatrix";
+            this.OperationMatrix.Size = new System.Drawing.Size(713, 393);
+            this.OperationMatrix.TabIndex = 12;
+            this.OperationMatrix.TabStop = false;
+            this.OperationMatrix.Visible = false;
             // 
-            // pOperationsWithOneMatrix
+            // OperationsWithOneMatrix
             // 
-            this.pOperationsWithOneMatrix.Controls.Add(this.tInputField);
-            this.pOperationsWithOneMatrix.Controls.Add(this.bTransposeMatrix);
-            this.pOperationsWithOneMatrix.Controls.Add(this.bFindReverseMatrix);
-            this.pOperationsWithOneMatrix.Controls.Add(this.bMultiplicationMatrixOnNumber);
-            this.pOperationsWithOneMatrix.Location = new System.Drawing.Point(85, 78);
-            this.pOperationsWithOneMatrix.Name = "pOperationsWithOneMatrix";
-            this.pOperationsWithOneMatrix.Size = new System.Drawing.Size(597, 288);
-            this.pOperationsWithOneMatrix.TabIndex = 1;
-            this.pOperationsWithOneMatrix.Visible = false;
+            this.OperationsWithOneMatrix.Controls.Add(this.InputField);
+            this.OperationsWithOneMatrix.Controls.Add(this.TransposeMatrix);
+            this.OperationsWithOneMatrix.Controls.Add(this.FindReverseMatrix);
+            this.OperationsWithOneMatrix.Controls.Add(this.bMultiplicationMatrixOnNumber);
+            this.OperationsWithOneMatrix.Location = new System.Drawing.Point(85, 78);
+            this.OperationsWithOneMatrix.Name = "OperationsWithOneMatrix";
+            this.OperationsWithOneMatrix.Size = new System.Drawing.Size(597, 288);
+            this.OperationsWithOneMatrix.TabIndex = 1;
+            this.OperationsWithOneMatrix.Visible = false;
             // 
-            // tInputField
+            // InputField
             // 
-            this.tInputField.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tInputField.Location = new System.Drawing.Point(9, 195);
-            this.tInputField.MaxLength = 30;
-            this.tInputField.Name = "tInputField";
-            this.tInputField.Size = new System.Drawing.Size(562, 30);
-            this.tInputField.TabIndex = 4;
-            this.tInputField.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tInputField.UseWaitCursor = true;
-            this.tInputField.Visible = false;
+            this.InputField.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.InputField.Location = new System.Drawing.Point(9, 195);
+            this.InputField.MaxLength = 30;
+            this.InputField.Name = "InputField";
+            this.InputField.Size = new System.Drawing.Size(562, 30);
+            this.InputField.TabIndex = 4;
+            this.InputField.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.InputField.UseWaitCursor = true;
+            this.InputField.Visible = false;
             // 
-            // bTransposeMatrix
+            // TransposeMatrix
             // 
-            this.bTransposeMatrix.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bTransposeMatrix.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bTransposeMatrix.Location = new System.Drawing.Point(400, 27);
-            this.bTransposeMatrix.Name = "bTransposeMatrix";
-            this.bTransposeMatrix.Size = new System.Drawing.Size(188, 136);
-            this.bTransposeMatrix.TabIndex = 3;
-            this.bTransposeMatrix.Text = "Транспонировать матрицу";
-            this.bTransposeMatrix.UseVisualStyleBackColor = true;
-            this.bTransposeMatrix.Click += new System.EventHandler(this.bTransposeMatrix_Click);
+            this.TransposeMatrix.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TransposeMatrix.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TransposeMatrix.Location = new System.Drawing.Point(400, 27);
+            this.TransposeMatrix.Name = "TransposeMatrix";
+            this.TransposeMatrix.Size = new System.Drawing.Size(188, 136);
+            this.TransposeMatrix.TabIndex = 3;
+            this.TransposeMatrix.Text = "Транспонировать матрицу";
+            this.TransposeMatrix.UseVisualStyleBackColor = true;
             // 
-            // bFindReverseMatrix
+            // FindReverseMatrix
             // 
-            this.bFindReverseMatrix.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bFindReverseMatrix.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bFindReverseMatrix.Location = new System.Drawing.Point(209, 27);
-            this.bFindReverseMatrix.Name = "bFindReverseMatrix";
-            this.bFindReverseMatrix.Size = new System.Drawing.Size(167, 136);
-            this.bFindReverseMatrix.TabIndex = 2;
-            this.bFindReverseMatrix.Text = "Найти обратную матрицу";
-            this.bFindReverseMatrix.UseVisualStyleBackColor = true;
-            this.bFindReverseMatrix.Click += new System.EventHandler(this.bFindReverseMatrix_Click);
+            this.FindReverseMatrix.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.FindReverseMatrix.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FindReverseMatrix.Location = new System.Drawing.Point(209, 27);
+            this.FindReverseMatrix.Name = "FindReverseMatrix";
+            this.FindReverseMatrix.Size = new System.Drawing.Size(167, 136);
+            this.FindReverseMatrix.TabIndex = 2;
+            this.FindReverseMatrix.Text = "Найти обратную матрицу";
+            this.FindReverseMatrix.UseVisualStyleBackColor = true;
             // 
             // bMultiplicationMatrixOnNumber
             // 
@@ -488,34 +486,33 @@
             this.bMultiplicationMatrixOnNumber.TabIndex = 1;
             this.bMultiplicationMatrixOnNumber.Text = "Умножить матрицу на число";
             this.bMultiplicationMatrixOnNumber.UseVisualStyleBackColor = true;
-            this.bMultiplicationMatrixOnNumber.Click += new System.EventHandler(this.bMultiplicationMatrixOnNumber_Click);
             // 
-            // gInputDataToMatrixFourOnFour
+            // InputDataToMatrixFourOnFour
             // 
-            this.gInputDataToMatrixFourOnFour.Controls.Add(this.textBox25);
-            this.gInputDataToMatrixFourOnFour.Controls.Add(this.textBox24);
-            this.gInputDataToMatrixFourOnFour.Controls.Add(this.textBox23);
-            this.gInputDataToMatrixFourOnFour.Controls.Add(this.textBox22);
-            this.gInputDataToMatrixFourOnFour.Controls.Add(this.textBox21);
-            this.gInputDataToMatrixFourOnFour.Controls.Add(this.textBox20);
-            this.gInputDataToMatrixFourOnFour.Controls.Add(this.textBox19);
-            this.gInputDataToMatrixFourOnFour.Controls.Add(this.textBox10);
-            this.gInputDataToMatrixFourOnFour.Controls.Add(this.textBox11);
-            this.gInputDataToMatrixFourOnFour.Controls.Add(this.textBox12);
-            this.gInputDataToMatrixFourOnFour.Controls.Add(this.textBox13);
-            this.gInputDataToMatrixFourOnFour.Controls.Add(this.textBox14);
-            this.gInputDataToMatrixFourOnFour.Controls.Add(this.textBox15);
-            this.gInputDataToMatrixFourOnFour.Controls.Add(this.textBox16);
-            this.gInputDataToMatrixFourOnFour.Controls.Add(this.textBox17);
-            this.gInputDataToMatrixFourOnFour.Controls.Add(this.textBox18);
-            this.gInputDataToMatrixFourOnFour.Controls.Add(this.label6);
-            this.gInputDataToMatrixFourOnFour.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gInputDataToMatrixFourOnFour.Location = new System.Drawing.Point(3, 18);
-            this.gInputDataToMatrixFourOnFour.Name = "gInputDataToMatrixFourOnFour";
-            this.gInputDataToMatrixFourOnFour.Size = new System.Drawing.Size(742, 370);
-            this.gInputDataToMatrixFourOnFour.TabIndex = 35;
-            this.gInputDataToMatrixFourOnFour.TabStop = false;
-            this.gInputDataToMatrixFourOnFour.Visible = false;
+            this.InputDataToMatrixFourOnFour.Controls.Add(this.textBox25);
+            this.InputDataToMatrixFourOnFour.Controls.Add(this.textBox24);
+            this.InputDataToMatrixFourOnFour.Controls.Add(this.textBox23);
+            this.InputDataToMatrixFourOnFour.Controls.Add(this.textBox22);
+            this.InputDataToMatrixFourOnFour.Controls.Add(this.textBox21);
+            this.InputDataToMatrixFourOnFour.Controls.Add(this.textBox20);
+            this.InputDataToMatrixFourOnFour.Controls.Add(this.textBox19);
+            this.InputDataToMatrixFourOnFour.Controls.Add(this.textBox10);
+            this.InputDataToMatrixFourOnFour.Controls.Add(this.textBox11);
+            this.InputDataToMatrixFourOnFour.Controls.Add(this.textBox12);
+            this.InputDataToMatrixFourOnFour.Controls.Add(this.textBox13);
+            this.InputDataToMatrixFourOnFour.Controls.Add(this.textBox14);
+            this.InputDataToMatrixFourOnFour.Controls.Add(this.textBox15);
+            this.InputDataToMatrixFourOnFour.Controls.Add(this.textBox16);
+            this.InputDataToMatrixFourOnFour.Controls.Add(this.textBox17);
+            this.InputDataToMatrixFourOnFour.Controls.Add(this.textBox18);
+            this.InputDataToMatrixFourOnFour.Controls.Add(this.label6);
+            this.InputDataToMatrixFourOnFour.Dock = System.Windows.Forms.DockStyle.Top;
+            this.InputDataToMatrixFourOnFour.Location = new System.Drawing.Point(3, 18);
+            this.InputDataToMatrixFourOnFour.Name = "InputDataToMatrixFourOnFour";
+            this.InputDataToMatrixFourOnFour.Size = new System.Drawing.Size(707, 370);
+            this.InputDataToMatrixFourOnFour.TabIndex = 35;
+            this.InputDataToMatrixFourOnFour.TabStop = false;
+            this.InputDataToMatrixFourOnFour.Visible = false;
             // 
             // textBox25
             // 
@@ -527,7 +524,7 @@
             this.textBox25.TabIndex = 16;
             this.textBox25.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox25.UseWaitCursor = true;
-            this.textBox25.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tInput1_KeyPress);
+            this.textBox25.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputKeyPress);
             // 
             // textBox24
             // 
@@ -539,7 +536,7 @@
             this.textBox24.TabIndex = 15;
             this.textBox24.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox24.UseWaitCursor = true;
-            this.textBox24.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tInput1_KeyPress);
+            this.textBox24.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputKeyPress);
             // 
             // textBox23
             // 
@@ -551,7 +548,7 @@
             this.textBox23.TabIndex = 14;
             this.textBox23.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox23.UseWaitCursor = true;
-            this.textBox23.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tInput1_KeyPress);
+            this.textBox23.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputKeyPress);
             // 
             // textBox22
             // 
@@ -563,7 +560,7 @@
             this.textBox22.TabIndex = 13;
             this.textBox22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox22.UseWaitCursor = true;
-            this.textBox22.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tInput1_KeyPress);
+            this.textBox22.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputKeyPress);
             // 
             // textBox21
             // 
@@ -575,7 +572,7 @@
             this.textBox21.TabIndex = 12;
             this.textBox21.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox21.UseWaitCursor = true;
-            this.textBox21.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tInput1_KeyPress);
+            this.textBox21.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputKeyPress);
             // 
             // textBox20
             // 
@@ -587,7 +584,7 @@
             this.textBox20.TabIndex = 11;
             this.textBox20.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox20.UseWaitCursor = true;
-            this.textBox20.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tInput1_KeyPress);
+            this.textBox20.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputKeyPress);
             // 
             // textBox19
             // 
@@ -599,7 +596,7 @@
             this.textBox19.TabIndex = 10;
             this.textBox19.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox19.UseWaitCursor = true;
-            this.textBox19.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tInput1_KeyPress);
+            this.textBox19.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputKeyPress);
             // 
             // textBox10
             // 
@@ -611,7 +608,7 @@
             this.textBox10.TabIndex = 1;
             this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox10.UseWaitCursor = true;
-            this.textBox10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tInput1_KeyPress);
+            this.textBox10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputKeyPress);
             // 
             // textBox11
             // 
@@ -623,7 +620,7 @@
             this.textBox11.TabIndex = 2;
             this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox11.UseWaitCursor = true;
-            this.textBox11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tInput1_KeyPress);
+            this.textBox11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputKeyPress);
             // 
             // textBox12
             // 
@@ -635,7 +632,7 @@
             this.textBox12.TabIndex = 3;
             this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox12.UseWaitCursor = true;
-            this.textBox12.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tInput1_KeyPress);
+            this.textBox12.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputKeyPress);
             // 
             // textBox13
             // 
@@ -647,7 +644,7 @@
             this.textBox13.TabIndex = 4;
             this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox13.UseWaitCursor = true;
-            this.textBox13.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tInput1_KeyPress);
+            this.textBox13.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputKeyPress);
             // 
             // textBox14
             // 
@@ -659,7 +656,7 @@
             this.textBox14.TabIndex = 5;
             this.textBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox14.UseWaitCursor = true;
-            this.textBox14.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tInput1_KeyPress);
+            this.textBox14.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputKeyPress);
             // 
             // textBox15
             // 
@@ -671,7 +668,7 @@
             this.textBox15.TabIndex = 6;
             this.textBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox15.UseWaitCursor = true;
-            this.textBox15.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tInput1_KeyPress);
+            this.textBox15.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputKeyPress);
             // 
             // textBox16
             // 
@@ -683,7 +680,7 @@
             this.textBox16.TabIndex = 7;
             this.textBox16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox16.UseWaitCursor = true;
-            this.textBox16.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tInput1_KeyPress);
+            this.textBox16.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputKeyPress);
             // 
             // textBox17
             // 
@@ -695,7 +692,7 @@
             this.textBox17.TabIndex = 8;
             this.textBox17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox17.UseWaitCursor = true;
-            this.textBox17.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tInput1_KeyPress);
+            this.textBox17.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputKeyPress);
             // 
             // textBox18
             // 
@@ -707,7 +704,7 @@
             this.textBox18.TabIndex = 9;
             this.textBox18.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox18.UseWaitCursor = true;
-            this.textBox18.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tInput1_KeyPress);
+            this.textBox18.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputKeyPress);
             // 
             // label6
             // 
@@ -719,52 +716,49 @@
             this.label6.TabIndex = 42;
             this.label6.Text = "Введите данные в матрицу";
             // 
-            // pOperationsWithTwoMatrix
+            // OperationsWithTwoMatrix
             // 
-            this.pOperationsWithTwoMatrix.Controls.Add(this.bMultiplicateMatrix);
-            this.pOperationsWithTwoMatrix.Controls.Add(this.bSubtractionMatrix);
-            this.pOperationsWithTwoMatrix.Controls.Add(this.bAdditionMatrix);
-            this.pOperationsWithTwoMatrix.Location = new System.Drawing.Point(85, 81);
-            this.pOperationsWithTwoMatrix.Name = "pOperationsWithTwoMatrix";
-            this.pOperationsWithTwoMatrix.Size = new System.Drawing.Size(597, 288);
-            this.pOperationsWithTwoMatrix.TabIndex = 1;
-            this.pOperationsWithTwoMatrix.Visible = false;
+            this.OperationsWithTwoMatrix.Controls.Add(this.MultiplicateMatrix);
+            this.OperationsWithTwoMatrix.Controls.Add(this.SubtractionMatrix);
+            this.OperationsWithTwoMatrix.Controls.Add(this.AdditionMatrix);
+            this.OperationsWithTwoMatrix.Location = new System.Drawing.Point(85, 81);
+            this.OperationsWithTwoMatrix.Name = "OperationsWithTwoMatrix";
+            this.OperationsWithTwoMatrix.Size = new System.Drawing.Size(597, 288);
+            this.OperationsWithTwoMatrix.TabIndex = 1;
+            this.OperationsWithTwoMatrix.Visible = false;
             // 
-            // bMultiplicateMatrix
+            // MultiplicateMatrix
             // 
-            this.bMultiplicateMatrix.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bMultiplicateMatrix.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bMultiplicateMatrix.Location = new System.Drawing.Point(400, 27);
-            this.bMultiplicateMatrix.Name = "bMultiplicateMatrix";
-            this.bMultiplicateMatrix.Size = new System.Drawing.Size(188, 136);
-            this.bMultiplicateMatrix.TabIndex = 3;
-            this.bMultiplicateMatrix.Text = "Умножение матриц";
-            this.bMultiplicateMatrix.UseVisualStyleBackColor = true;
-            this.bMultiplicateMatrix.Click += new System.EventHandler(this.bMultiplicateMatrix_Click);
+            this.MultiplicateMatrix.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.MultiplicateMatrix.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MultiplicateMatrix.Location = new System.Drawing.Point(400, 27);
+            this.MultiplicateMatrix.Name = "MultiplicateMatrix";
+            this.MultiplicateMatrix.Size = new System.Drawing.Size(188, 136);
+            this.MultiplicateMatrix.TabIndex = 3;
+            this.MultiplicateMatrix.Text = "Умножение матриц";
+            this.MultiplicateMatrix.UseVisualStyleBackColor = true;
             // 
-            // bSubtractionMatrix
+            // SubtractionMatrix
             // 
-            this.bSubtractionMatrix.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bSubtractionMatrix.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bSubtractionMatrix.Location = new System.Drawing.Point(209, 27);
-            this.bSubtractionMatrix.Name = "bSubtractionMatrix";
-            this.bSubtractionMatrix.Size = new System.Drawing.Size(167, 136);
-            this.bSubtractionMatrix.TabIndex = 2;
-            this.bSubtractionMatrix.Text = "Вычитание матриц";
-            this.bSubtractionMatrix.UseVisualStyleBackColor = true;
-            this.bSubtractionMatrix.Click += new System.EventHandler(this.bSubtractionMatrix_Click);
+            this.SubtractionMatrix.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SubtractionMatrix.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SubtractionMatrix.Location = new System.Drawing.Point(209, 27);
+            this.SubtractionMatrix.Name = "SubtractionMatrix";
+            this.SubtractionMatrix.Size = new System.Drawing.Size(167, 136);
+            this.SubtractionMatrix.TabIndex = 2;
+            this.SubtractionMatrix.Text = "Вычитание матриц";
+            this.SubtractionMatrix.UseVisualStyleBackColor = true;
             // 
-            // bAdditionMatrix
+            // AdditionMatrix
             // 
-            this.bAdditionMatrix.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bAdditionMatrix.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bAdditionMatrix.Location = new System.Drawing.Point(9, 27);
-            this.bAdditionMatrix.Name = "bAdditionMatrix";
-            this.bAdditionMatrix.Size = new System.Drawing.Size(168, 136);
-            this.bAdditionMatrix.TabIndex = 1;
-            this.bAdditionMatrix.Text = "Сложение матриц";
-            this.bAdditionMatrix.UseVisualStyleBackColor = true;
-            this.bAdditionMatrix.Click += new System.EventHandler(this.bAdditionMatrix_Click);
+            this.AdditionMatrix.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AdditionMatrix.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AdditionMatrix.Location = new System.Drawing.Point(9, 27);
+            this.AdditionMatrix.Name = "AdditionMatrix";
+            this.AdditionMatrix.Size = new System.Drawing.Size(168, 136);
+            this.AdditionMatrix.TabIndex = 1;
+            this.AdditionMatrix.Text = "Сложение матриц";
+            this.AdditionMatrix.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -786,7 +780,7 @@
             this.textBox8.TabIndex = 8;
             this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox8.UseWaitCursor = true;
-            this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tInput1_KeyPress);
+            this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputKeyPress);
             // 
             // textBox6
             // 
@@ -798,7 +792,7 @@
             this.textBox6.TabIndex = 6;
             this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox6.UseWaitCursor = true;
-            this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tInput1_KeyPress);
+            this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputKeyPress);
             // 
             // textBox5
             // 
@@ -810,7 +804,7 @@
             this.textBox5.TabIndex = 5;
             this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox5.UseWaitCursor = true;
-            this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tInput1_KeyPress);
+            this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputKeyPress);
             // 
             // textBox1
             // 
@@ -822,7 +816,7 @@
             this.textBox1.TabIndex = 1;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox1.UseWaitCursor = true;
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tInput1_KeyPress);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputKeyPress);
             // 
             // textBox2
             // 
@@ -845,7 +839,7 @@
             this.textBox3.TabIndex = 3;
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox3.UseWaitCursor = true;
-            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tInput1_KeyPress);
+            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputKeyPress);
             // 
             // textBox4
             // 
@@ -857,7 +851,7 @@
             this.textBox4.TabIndex = 4;
             this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox4.UseWaitCursor = true;
-            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tInput1_KeyPress);
+            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputKeyPress);
             // 
             // label5
             // 
@@ -873,21 +867,21 @@
             // 
             this.bBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bBack.Location = new System.Drawing.Point(491, 430);
+            this.bBack.Location = new System.Drawing.Point(464, 429);
             this.bBack.Name = "bBack";
             this.bBack.Size = new System.Drawing.Size(116, 36);
             this.bBack.TabIndex = 6;
             this.bBack.Text = "← Назад";
             this.bBack.UseVisualStyleBackColor = true;
             this.bBack.Visible = false;
-            this.bBack.Click += new System.EventHandler(this.bBack_Click);
+            this.bBack.Click += new System.EventHandler(this.Return);
             // 
             // MatrixCalculation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(760, 488);
-            this.Controls.Add(this.pCloseWindow);
+            this.ClientSize = new System.Drawing.Size(725, 488);
+            this.Controls.Add(this.CloseWindow);
             this.Controls.Add(this.gHomeWindow);
             this.Controls.Add(this.bBack);
             this.Controls.Add(this.bNext);
@@ -898,26 +892,26 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Приложение для работы с матрицами";
-            ((System.ComponentModel.ISupportInitialize)(this.pCloseWindow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CloseWindow)).EndInit();
             this.gHomeWindow.ResumeLayout(false);
             this.gHomeWindow.PerformLayout();
-            this.gInputDataToMatrixTwoOnTwo.ResumeLayout(false);
-            this.gInputDataToMatrixTwoOnTwo.PerformLayout();
+            this.InputDataToMatrixTwoOnTwo.ResumeLayout(false);
+            this.InputDataToMatrixTwoOnTwo.PerformLayout();
             this.pChooseTypeInput.ResumeLayout(false);
             this.pChooseTypeInput.PerformLayout();
             this.pChooseSizeMatrix.ResumeLayout(false);
             this.pChooseSizeMatrix.PerformLayout();
-            this.gInputDataToMatrixThreeOnThree.ResumeLayout(false);
-            this.gInputDataToMatrixThreeOnThree.PerformLayout();
-            this.gResultCalculation.ResumeLayout(false);
-            this.gResultCalculation.PerformLayout();
-            this.gOperationMatrix.ResumeLayout(false);
-            this.gOperationMatrix.PerformLayout();
-            this.pOperationsWithOneMatrix.ResumeLayout(false);
-            this.pOperationsWithOneMatrix.PerformLayout();
-            this.gInputDataToMatrixFourOnFour.ResumeLayout(false);
-            this.gInputDataToMatrixFourOnFour.PerformLayout();
-            this.pOperationsWithTwoMatrix.ResumeLayout(false);
+            this.InputDataToMatrixThreeOnThree.ResumeLayout(false);
+            this.InputDataToMatrixThreeOnThree.PerformLayout();
+            this.ResultCalculation.ResumeLayout(false);
+            this.ResultCalculation.PerformLayout();
+            this.OperationMatrix.ResumeLayout(false);
+            this.OperationMatrix.PerformLayout();
+            this.OperationsWithOneMatrix.ResumeLayout(false);
+            this.OperationsWithOneMatrix.PerformLayout();
+            this.InputDataToMatrixFourOnFour.ResumeLayout(false);
+            this.InputDataToMatrixFourOnFour.PerformLayout();
+            this.OperationsWithTwoMatrix.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -926,22 +920,22 @@
         private System.Windows.Forms.Button CreateBothMatrix;
         private System.Windows.Forms.Button CreateMatrix;
         private System.Windows.Forms.Button bNext;
-        private System.Windows.Forms.PictureBox pCloseWindow;
+        private System.Windows.Forms.PictureBox CloseWindow;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox gHomeWindow;
-        private System.Windows.Forms.GroupBox gOperationMatrix;
+        private System.Windows.Forms.GroupBox OperationMatrix;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button bBack;
-        private System.Windows.Forms.GroupBox gResultCalculation;
+        private System.Windows.Forms.GroupBox ResultCalculation;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tOutputData;
-        private System.Windows.Forms.GroupBox gInputDataToMatrixTwoOnTwo;
+        private System.Windows.Forms.TextBox OutputData;
+        private System.Windows.Forms.GroupBox InputDataToMatrixTwoOnTwo;
         private System.Windows.Forms.TextBox tInput4;
         private System.Windows.Forms.TextBox tInput3;
         private System.Windows.Forms.TextBox tInput2;
         private System.Windows.Forms.TextBox tInput1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.GroupBox gInputDataToMatrixThreeOnThree;
+        private System.Windows.Forms.GroupBox InputDataToMatrixThreeOnThree;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox1;
@@ -950,7 +944,7 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.GroupBox gInputDataToMatrixFourOnFour;
+        private System.Windows.Forms.GroupBox InputDataToMatrixFourOnFour;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.TextBox textBox12;
@@ -968,14 +962,14 @@
         private System.Windows.Forms.TextBox textBox21;
         private System.Windows.Forms.TextBox textBox20;
         private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.Panel pOperationsWithTwoMatrix;
-        private System.Windows.Forms.Button bMultiplicateMatrix;
-        private System.Windows.Forms.Button bSubtractionMatrix;
-        private System.Windows.Forms.Button bAdditionMatrix;
-        private System.Windows.Forms.Panel pOperationsWithOneMatrix;
-        private System.Windows.Forms.TextBox tInputField;
-        private System.Windows.Forms.Button bTransposeMatrix;
-        private System.Windows.Forms.Button bFindReverseMatrix;
+        private System.Windows.Forms.Panel OperationsWithTwoMatrix;
+        private System.Windows.Forms.Button MultiplicateMatrix;
+        private System.Windows.Forms.Button SubtractionMatrix;
+        private System.Windows.Forms.Button AdditionMatrix;
+        private System.Windows.Forms.Panel OperationsWithOneMatrix;
+        private System.Windows.Forms.TextBox InputField;
+        private System.Windows.Forms.Button TransposeMatrix;
+        private System.Windows.Forms.Button FindReverseMatrix;
         private System.Windows.Forms.Button bMultiplicationMatrixOnNumber;
         private System.Windows.Forms.Panel pChooseSizeMatrix;
         private System.Windows.Forms.RadioButton sizeFourToFour;

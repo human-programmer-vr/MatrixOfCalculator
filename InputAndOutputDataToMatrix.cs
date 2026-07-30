@@ -11,8 +11,8 @@ namespace MatrixOfCalculator.Classes
 
         public static float[,] HandleInput(float[,] matrix, params float[] input)
         {
-            for (short x = 0, index = 0; x < matrix.GetLength(0); x++)
-                for (short y = 0; y < matrix.GetLength(1); y++, index++)
+            for (int x = 0, index = 0; x < matrix.GetLength(0); x++)
+                for (int y = 0; y < matrix.GetLength(1); y++, index++)
                     matrix[x, y] = input[index];
 
             return matrix;
@@ -20,8 +20,8 @@ namespace MatrixOfCalculator.Classes
 
         public static float[,] AutoInput(float[,] matrix)
         {
-            for (short x = 0; x < matrix.GetLength(0); x++)
-                for (short y = 0; y < matrix.GetLength(1); y++)
+            for (int x = 0; x < matrix.GetLength(0); x++)
+                for (int y = 0; y < matrix.GetLength(1); y++)
                     matrix[x, y] = _rand.Next(-30, 30);
 
             return matrix;
@@ -38,10 +38,10 @@ namespace MatrixOfCalculator.Classes
             output.Clear();
             _stringBuilder.Clear();
 
-            for (short x = 0; x < matrix.GetLength(0); x++)
+            for (int x = 0; x < matrix.GetLength(0); x++)
             {
-                for (short y = 0; y < matrix.GetLength(1); y++)
-                    _stringBuilder.Append(matrix[x, y].ToString("F2") + "\t");
+                for (int y = 0; y < matrix.GetLength(1); y++)
+                    _stringBuilder.Append(Math.Round(matrix[x, y], 3) + "\t");
 
                 _stringBuilder.AppendLine();
             }

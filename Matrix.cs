@@ -6,16 +6,16 @@ namespace MatrixOfCalculator
     {
         public static float[,] _matrixOne, _matrixTwo, _temp;
 
-        public static float[,] MultiplicateNumberOnMatrix(float[,] matrix, byte multiplicate)
+        public static float[,] MultiplicateNumberOnMatrix(float[,] matrix, int multiplicate)
         {
-            for (short x = 0; x < matrix.GetLength(0); x++)
-                for (short y = 0; y < matrix.GetLength(1); y++)
-                    matrix[x, y] = (short)(matrix[x, y] * multiplicate);
+            for (int x = 0; x < matrix.GetLength(0); x++)
+                for (int y = 0; y < matrix.GetLength(1); y++)
+                    matrix[x, y] = (int)(matrix[x, y] * multiplicate);
 
             return matrix;
         }
 
-        public static float[,] ReverseMatrix(float[,] matrix, float determinant = 0)
+        public static float[,] ReverseMatrix(float[,] matrix, float det = 0)
         {
             _temp = new float[matrix.GetLength(0), matrix.GetLength(1)];
 
@@ -23,17 +23,17 @@ namespace MatrixOfCalculator
 
             if (matrix.Length == 4)
             {                
-                determinant = FindDeterminantTwoOnTwo(matrix) == 0 ? 0 : FindDeterminantTwoOnTwo(matrix);
+                det = FindDeterminantTwoOnTwo(matrix) == 0 ? 0 : FindDeterminantTwoOnTwo(matrix);
 
-                if (determinant == 0)
+                if (det == 0)
                     return _temp;
             }
 
             if (matrix.Length == 9)
             {
-                determinant = FindDeterminantThreeOnThree(matrix) == 0 ? 0 : FindDeterminantThreeOnThree(matrix);
+                det = FindDeterminantThreeOnThree(matrix) == 0 ? 0 : FindDeterminantThreeOnThree(matrix);
 
-                if (determinant == 0)
+                if (det == 0)
                     return _temp;
 
                 _temp = InputAndOutputDataToMatrix.HandleInput(matrix,
@@ -48,22 +48,22 @@ namespace MatrixOfCalculator
                     (matrix[0, 0] * matrix[1, 1]) - (matrix[0, 1] * matrix[1, 0]));
             }
 
-            for (short x = 0; x < _temp.GetLength(0); x++)
-                for (short y = 0; y < _temp.GetLength(1); y++)
+            for (int x = 0; x < _temp.GetLength(0); x++)
+                for (int y = 0; y < _temp.GetLength(1); y++)
                     if ((x + y) % 2 != 0)
                         _temp[x, y] *= -1;
 
-            for (short x = 0; x < _temp.GetLength(0); x++)
-                for (short y = 0; y < _temp.GetLength(1); y++)
-                    _temp[x, y] /= determinant;
+            for (int x = 0; x < _temp.GetLength(0); x++)
+                for (int y = 0; y < _temp.GetLength(1); y++)
+                    _temp[x, y] /= det;
 
             return _temp;
         }
 
         public static float[,] TransposeMatrix(float[,] matrix)
         {
-            for (short x = 0; x < matrix.GetLength(0); x++)
-                for (short y = 0; y < matrix.GetLength(1); y++)
+            for (int x = 0; x < matrix.GetLength(0); x++)
+                for (int y = 0; y < matrix.GetLength(1); y++)
                     matrix[y, x] = matrix[x, y];
 
             return matrix;
@@ -73,9 +73,9 @@ namespace MatrixOfCalculator
         {
             _temp = new float[matrixOne.GetLength(0), matrixOne.GetLength(1)];
 
-            for (short x = 0; x < matrixOne.GetLength(0); x++)
-                for (short y = 0; y < matrixOne.GetLength(1); y++)
-                    _temp[x, y] = (short)(matrixOne[x, y] + matrixTwo[x, y]);
+            for (int x = 0; x < matrixOne.GetLength(0); x++)
+                for (int y = 0; y < matrixOne.GetLength(1); y++)
+                    _temp[x, y] = matrixOne[x, y] + matrixTwo[x, y];
 
             return _temp;
         }
@@ -84,9 +84,9 @@ namespace MatrixOfCalculator
         {
             _temp = new float[matrixOne.GetLength(0), matrixOne.GetLength(1)];
 
-            for (short x = 0; x < matrixTwo.GetLength(0); x++)
-                for (short y = 0; y < matrixTwo.GetLength(1); y++)
-                    _temp[x, y] = (short)(matrixTwo[x, y] - matrixOne[x, y]);
+            for (int x = 0; x < matrixTwo.GetLength(0); x++)
+                for (int y = 0; y < matrixTwo.GetLength(1); y++)
+                    _temp[x, y] = matrixTwo[x, y] - matrixOne[x, y];
 
             return _temp;
         }
@@ -105,14 +105,14 @@ namespace MatrixOfCalculator
             return null;
         }
 
-        private static short FindDeterminantTwoOnTwo(float[,] matrix)
+        private static int FindDeterminantTwoOnTwo(float[,] matrix)
         {
-            return (short)((matrix[0, 0] * matrix[1, 1]) - (matrix[0, 1] * matrix[1, 0]));
+            return (int)((matrix[0, 0] * matrix[1, 1]) - (matrix[0, 1] * matrix[1, 0]));
         }
 
-        private static float FindDeterminantThreeOnThree(float[,] matrix)
+        private static int FindDeterminantThreeOnThree(float[,] matrix)
         {
-            return
+            return (int)
                 (matrix[0, 0] * matrix[1, 1] * matrix[2, 2] +
                 matrix[0, 1] * matrix[1, 2] * matrix[2, 0] +
                 matrix[1, 0] * matrix[2, 1] * matrix[0, 2] -

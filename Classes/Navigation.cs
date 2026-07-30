@@ -4,12 +4,12 @@ namespace MatrixOfCalculator.Forms
 {
     public class Navigation
     {
-        public static void MovePage(GroupBox currentPage, GroupBox newPage)
+        public static void MoveToPage(GroupBox currentPage, GroupBox nextPage)
         {
             currentPage.Visible = false;
 
-            newPage.Parent = currentPage.Parent;
-            newPage.Visible = true;
+            nextPage.Parent = currentPage.Parent;
+            nextPage.Visible = true;
         }
 
         public static void ViewElements(Panel hideElement, Panel showElement) 
@@ -28,11 +28,6 @@ namespace MatrixOfCalculator.Forms
 
             chooseDesign.Visible = true;
             chooseDesign.BringToFront();
-        }
-
-        public void CheckCurrentPage()
-        {
-
         }
     }
 }

@@ -10,7 +10,7 @@ namespace MatrixOfCalculator.Classes
             return CheckLimitRangeValue(int.TryParse(text, out int result) ? result : 0);
         }
 
-        private static float CheckLimitRangeValue(int number)
+        private static int CheckLimitRangeValue(int number)
         {
             if (number > 30)
                 number = 30;
