@@ -26,7 +26,7 @@ namespace MatrixOfCalculator.Forms
                 else
                     UtilityTools.SetColorForButton(CreateBothMatrix);
             };
-            MultiplicateMatrix.Click += (s, e) => 
+            MultiplicationMatrixOnNumber.Click += (s, e) => 
             {
                 InputField.Visible = InputField.Visible != false ? false : true;
             };
@@ -94,10 +94,6 @@ namespace MatrixOfCalculator.Forms
                 MovePageResultCalculation();
             else if (ResultCalculation.Visible)
                 MoveHomePage();
-
-            // Умножение на число
-            //Matrix._temp = Matrix.MultiplicateNumberOnMatrix(Matrix._matrixOne, InputField.Text.CheckIntOrDefault());
-            //InputAndOutputDataToMatrix.OutputData(Matrix._temp, OutputData);
         }
 
         private void CheckHandleOrAutomateInput()
@@ -287,6 +283,13 @@ namespace MatrixOfCalculator.Forms
 
         private void MovePageResultCalculation()
         {
+
+            if (InputField.Text != null)
+            {
+                Matrix._temp = Matrix.MultiplicateNumberOnMatrix(Matrix._matrixOne, InputField.Text.CheckIntOrDefault());
+                InputAndOutputDataToMatrix.OutputData(Matrix._temp, OutputData);
+            }
+
             Next.Text = "Главная";
             Navigation.MoveToPage(currentPage: OperationMatrix, nextPage: ResultCalculation);
         }
@@ -302,7 +305,7 @@ namespace MatrixOfCalculator.Forms
             UtilityTools.ResetColorForButton(CreateBothMatrix);
         }
 
-        private void MoveToPreviousPage()
+        private void MoveToPreviousPage() 
         {
             if (InputDataToMatrixTwoOnTwo.Visible)
             {
@@ -331,6 +334,8 @@ namespace MatrixOfCalculator.Forms
                 }
                 else
                     Navigation.MoveToPage(currentPage: OperationMatrix, nextPage: HomeWindow);
+
+                HideButton(Return);
 
             } else if (ResultCalculation.Visible)
             {

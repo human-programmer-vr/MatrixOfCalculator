@@ -58,7 +58,7 @@
             this.InputField = new System.Windows.Forms.TextBox();
             this.TransposeMatrix = new System.Windows.Forms.Button();
             this.FindReverseMatrix = new System.Windows.Forms.Button();
-            this.bMultiplicationMatrixOnNumber = new System.Windows.Forms.Button();
+            this.MultiplicationMatrixOnNumber = new System.Windows.Forms.Button();
             this.InputDataToMatrixFourOnFour = new System.Windows.Forms.GroupBox();
             this.textBox25 = new System.Windows.Forms.TextBox();
             this.textBox24 = new System.Windows.Forms.TextBox();
@@ -434,7 +434,7 @@
             this.OperationsWithOneMatrix.Controls.Add(this.InputField);
             this.OperationsWithOneMatrix.Controls.Add(this.TransposeMatrix);
             this.OperationsWithOneMatrix.Controls.Add(this.FindReverseMatrix);
-            this.OperationsWithOneMatrix.Controls.Add(this.bMultiplicationMatrixOnNumber);
+            this.OperationsWithOneMatrix.Controls.Add(this.MultiplicationMatrixOnNumber);
             this.OperationsWithOneMatrix.Location = new System.Drawing.Point(85, 78);
             this.OperationsWithOneMatrix.Name = "OperationsWithOneMatrix";
             this.OperationsWithOneMatrix.Size = new System.Drawing.Size(597, 288);
@@ -477,14 +477,14 @@
             // 
             // bMultiplicationMatrixOnNumber
             // 
-            this.bMultiplicationMatrixOnNumber.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bMultiplicationMatrixOnNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bMultiplicationMatrixOnNumber.Location = new System.Drawing.Point(9, 27);
-            this.bMultiplicationMatrixOnNumber.Name = "bMultiplicationMatrixOnNumber";
-            this.bMultiplicationMatrixOnNumber.Size = new System.Drawing.Size(168, 136);
-            this.bMultiplicationMatrixOnNumber.TabIndex = 1;
-            this.bMultiplicationMatrixOnNumber.Text = "Умножить матрицу на число";
-            this.bMultiplicationMatrixOnNumber.UseVisualStyleBackColor = true;
+            this.MultiplicationMatrixOnNumber.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.MultiplicationMatrixOnNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MultiplicationMatrixOnNumber.Location = new System.Drawing.Point(9, 27);
+            this.MultiplicationMatrixOnNumber.Name = "bMultiplicationMatrixOnNumber";
+            this.MultiplicationMatrixOnNumber.Size = new System.Drawing.Size(168, 136);
+            this.MultiplicationMatrixOnNumber.TabIndex = 1;
+            this.MultiplicationMatrixOnNumber.Text = "Умножить матрицу на число";
+            this.MultiplicationMatrixOnNumber.UseVisualStyleBackColor = true;
             // 
             // InputDataToMatrixFourOnFour
             // 
@@ -968,7 +968,7 @@
         private System.Windows.Forms.TextBox InputField;
         private System.Windows.Forms.Button TransposeMatrix;
         private System.Windows.Forms.Button FindReverseMatrix;
-        private System.Windows.Forms.Button bMultiplicationMatrixOnNumber;
+        private System.Windows.Forms.Button MultiplicationMatrixOnNumber;
         private System.Windows.Forms.Panel pChooseSizeMatrix;
         private System.Windows.Forms.RadioButton sizeFourToFour;
         private System.Windows.Forms.RadioButton sizeThreeToThree;

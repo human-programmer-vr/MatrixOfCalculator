@@ -5,7 +5,7 @@ namespace MatrixOfCalculator.Classes
 {
     public static class Validation
     {
-        public static float CheckIntOrDefault(this string text)
+        public static int CheckIntOrDefault(this string text)
         {
             return CheckLimitRangeValue(int.TryParse(text, out int result) ? result : 0);
         }
