@@ -32,8 +32,8 @@
             this.CreateMatrix = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.CloseWindow = new System.Windows.Forms.PictureBox();
-            this.bNext = new System.Windows.Forms.Button();
-            this.gHomeWindow = new System.Windows.Forms.GroupBox();
+            this.Next = new System.Windows.Forms.Button();
+            this.HomeWindow = new System.Windows.Forms.GroupBox();
             this.InputDataToMatrixTwoOnTwo = new System.Windows.Forms.GroupBox();
             this.tInput4 = new System.Windows.Forms.TextBox();
             this.tInput3 = new System.Windows.Forms.TextBox();
@@ -90,9 +90,9 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.bBack = new System.Windows.Forms.Button();
+            this.Return = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.CloseWindow)).BeginInit();
-            this.gHomeWindow.SuspendLayout();
+            this.HomeWindow.SuspendLayout();
             this.InputDataToMatrixTwoOnTwo.SuspendLayout();
             this.pChooseTypeInput.SuspendLayout();
             this.pChooseSizeMatrix.SuspendLayout();
@@ -153,32 +153,31 @@
             // 
             // bNext
             // 
-            this.bNext.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bNext.Location = new System.Drawing.Point(586, 429);
-            this.bNext.Name = "bNext";
-            this.bNext.Size = new System.Drawing.Size(116, 36);
-            this.bNext.TabIndex = 5;
-            this.bNext.Text = "Далее →";
-            this.bNext.UseVisualStyleBackColor = true;
-            this.bNext.Click += new System.EventHandler(this.Next);
+            this.Next.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Next.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Next.Location = new System.Drawing.Point(586, 429);
+            this.Next.Name = "bNext";
+            this.Next.Size = new System.Drawing.Size(116, 36);
+            this.Next.TabIndex = 5;
+            this.Next.Text = "Далее →";
+            this.Next.UseVisualStyleBackColor = true;
             // 
             // gHomeWindow
             // 
-            this.gHomeWindow.Controls.Add(this.InputDataToMatrixTwoOnTwo);
-            this.gHomeWindow.Controls.Add(this.pChooseTypeInput);
-            this.gHomeWindow.Controls.Add(this.pChooseSizeMatrix);
-            this.gHomeWindow.Controls.Add(this.InputDataToMatrixThreeOnThree);
-            this.gHomeWindow.Controls.Add(this.label1);
-            this.gHomeWindow.Controls.Add(this.CreateMatrix);
-            this.gHomeWindow.Controls.Add(this.CreateBothMatrix);
-            this.gHomeWindow.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gHomeWindow.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.gHomeWindow.Location = new System.Drawing.Point(0, 0);
-            this.gHomeWindow.Name = "gHomeWindow";
-            this.gHomeWindow.Size = new System.Drawing.Size(725, 408);
-            this.gHomeWindow.TabIndex = 11;
-            this.gHomeWindow.TabStop = false;
+            this.HomeWindow.Controls.Add(this.InputDataToMatrixTwoOnTwo);
+            this.HomeWindow.Controls.Add(this.pChooseTypeInput);
+            this.HomeWindow.Controls.Add(this.pChooseSizeMatrix);
+            this.HomeWindow.Controls.Add(this.InputDataToMatrixThreeOnThree);
+            this.HomeWindow.Controls.Add(this.label1);
+            this.HomeWindow.Controls.Add(this.CreateMatrix);
+            this.HomeWindow.Controls.Add(this.CreateBothMatrix);
+            this.HomeWindow.Dock = System.Windows.Forms.DockStyle.Top;
+            this.HomeWindow.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.HomeWindow.Location = new System.Drawing.Point(0, 0);
+            this.HomeWindow.Name = "gHomeWindow";
+            this.HomeWindow.Size = new System.Drawing.Size(725, 408);
+            this.HomeWindow.TabIndex = 11;
+            this.HomeWindow.TabStop = false;
             // 
             // InputDataToMatrixTwoOnTwo
             // 
@@ -865,16 +864,15 @@
             // 
             // bBack
             // 
-            this.bBack.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bBack.Location = new System.Drawing.Point(464, 429);
-            this.bBack.Name = "bBack";
-            this.bBack.Size = new System.Drawing.Size(116, 36);
-            this.bBack.TabIndex = 6;
-            this.bBack.Text = "← Назад";
-            this.bBack.UseVisualStyleBackColor = true;
-            this.bBack.Visible = false;
-            this.bBack.Click += new System.EventHandler(this.Return);
+            this.Return.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Return.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Return.Location = new System.Drawing.Point(464, 429);
+            this.Return.Name = "bBack";
+            this.Return.Size = new System.Drawing.Size(116, 36);
+            this.Return.TabIndex = 6;
+            this.Return.Text = "← Назад";
+            this.Return.UseVisualStyleBackColor = true;
+            this.Return.Visible = false;
             // 
             // MatrixCalculation
             // 
@@ -882,9 +880,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(725, 488);
             this.Controls.Add(this.CloseWindow);
-            this.Controls.Add(this.gHomeWindow);
-            this.Controls.Add(this.bBack);
-            this.Controls.Add(this.bNext);
+            this.Controls.Add(this.HomeWindow);
+            this.Controls.Add(this.Return);
+            this.Controls.Add(this.Next);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -893,8 +891,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Приложение для работы с матрицами";
             ((System.ComponentModel.ISupportInitialize)(this.CloseWindow)).EndInit();
-            this.gHomeWindow.ResumeLayout(false);
-            this.gHomeWindow.PerformLayout();
+            this.HomeWindow.ResumeLayout(false);
+            this.HomeWindow.PerformLayout();
             this.InputDataToMatrixTwoOnTwo.ResumeLayout(false);
             this.InputDataToMatrixTwoOnTwo.PerformLayout();
             this.pChooseTypeInput.ResumeLayout(false);
@@ -919,13 +917,13 @@
         #endregion
         private System.Windows.Forms.Button CreateBothMatrix;
         private System.Windows.Forms.Button CreateMatrix;
-        private System.Windows.Forms.Button bNext;
+        private System.Windows.Forms.Button Next;
         private System.Windows.Forms.PictureBox CloseWindow;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox gHomeWindow;
+        private System.Windows.Forms.GroupBox HomeWindow;
         private System.Windows.Forms.GroupBox OperationMatrix;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button bBack;
+        private System.Windows.Forms.Button Return;
         private System.Windows.Forms.GroupBox ResultCalculation;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox OutputData;
