@@ -62,11 +62,13 @@ namespace MatrixOfCalculator
 
         public static float[,] TransposeMatrix(float[,] matrix)
         {
+            _temp = new float[_matrixOne.GetLength(0), _matrixOne.GetLength(1)];
+
             for (int x = 0; x < matrix.GetLength(0); x++)
                 for (int y = 0; y < matrix.GetLength(1); y++)
-                    matrix[y, x] = matrix[x, y];
+                    _temp[y, x] = matrix[x, y];
 
-            return matrix;
+            return _temp;
         }
 
         public static float[,] AdditionMatrix(float[,] matrixOne, float[,] matrixTwo)

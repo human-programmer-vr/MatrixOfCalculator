@@ -1,7 +1,5 @@
 ﻿using MatrixOfCalculator.Classes;
-using System;
 using System.Drawing;
-using System.Security.Permissions;
 using System.Windows.Forms;
 
 namespace MatrixOfCalculator.Forms
@@ -79,6 +77,7 @@ namespace MatrixOfCalculator.Forms
 
         private void HideButton(Button button) => button.Visible = false;
         private void ShowButton(Button button) => button.Visible = true;
+        private void InputKeyPress(object sender, KeyPressEventArgs e) => Validation.OnlyNumbers(sender, e);
 
         public void MoveToNextPage()
         {
@@ -283,8 +282,7 @@ namespace MatrixOfCalculator.Forms
 
         private void MovePageResultCalculation()
         {
-
-            if (InputField.Text != null)
+            if (InputField.Text != "")
             {
                 Matrix._temp = Matrix.MultiplicateNumberOnMatrix(Matrix._matrixOne, InputField.Text.CheckIntOrDefault());
                 InputAndOutputDataToMatrix.OutputData(Matrix._temp, OutputData);
@@ -344,7 +342,6 @@ namespace MatrixOfCalculator.Forms
             }
         }
 
-        private void InputKeyPress(object sender, KeyPressEventArgs e) => Validation.OnlyNumbers(sender, e);
 
         private bool IsChooseOneMatrixAndHandleInput()
         {
