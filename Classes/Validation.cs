@@ -22,7 +22,7 @@ namespace MatrixOfCalculator.Classes
 
         public static void OnlyNumbers(object sender, KeyPressEventArgs e)
         {
-            if ((!Char.IsDigit(e.KeyChar) && e.KeyChar != 8))
+            if ((!Char.IsDigit(e.KeyChar) && e.KeyChar != 8 && e.KeyChar != 45))
                 e.Handled = true;
         }
     }

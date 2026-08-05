@@ -41,7 +41,7 @@ namespace MatrixOfCalculator.Classes
             for (int x = 0; x < matrix.GetLength(0); x++)
             {
                 for (int y = 0; y < matrix.GetLength(1); y++)
-                    _stringBuilder.Append(Math.Round(matrix[x, y], 3) + "\t");
+                    _stringBuilder.Append(Math.Round(matrix[x, y], 2) + "\t");
 
                 _stringBuilder.AppendLine();
             }

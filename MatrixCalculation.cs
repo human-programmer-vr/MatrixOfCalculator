@@ -30,37 +30,27 @@ namespace MatrixOfCalculator.Forms
             };
             TransposeMatrix.Click += (s, e) =>
             {
-                Matrix._temp = Matrix.TransposeMatrix(Matrix._matrixOne);
-                InputAndOutputDataToMatrix.OutputData(Matrix._temp, OutputData);
-
-                MovePageResultCalculation();
+                Matrix._destinationMatrix = Matrix.TransposeMatrix(Matrix._matrixOne);
+                MovePageResultCalculation();    
             };
             AdditionMatrix.Click += (s, e) =>
             {
-                Matrix._temp = Matrix.AdditionMatrix(Matrix._matrixOne, Matrix._matrixTwo);
-                InputAndOutputDataToMatrix.OutputData(Matrix._temp, OutputData);
-
+                Matrix._destinationMatrix = Matrix.AdditionMatrix(Matrix._matrixOne, Matrix._matrixTwo);
                 MovePageResultCalculation();
             };
             SubtractionMatrix.Click += (s, e) =>
             {
-                Matrix._temp = Matrix.SubstractionMatrix(Matrix._matrixOne, Matrix._matrixTwo);
-                InputAndOutputDataToMatrix.OutputData(Matrix._temp, OutputData);
-
+                Matrix._destinationMatrix = Matrix.SubstractionMatrix(Matrix._matrixOne, Matrix._matrixTwo);
                 MovePageResultCalculation();
             };
             MultiplicateMatrix.Click += (s, e) => 
             {
-                Matrix._temp = Matrix.MultiplicateBothMatrix(Matrix._matrixOne, Matrix._matrixTwo);
-                InputAndOutputDataToMatrix.OutputData(Matrix._temp, OutputData);
-
+                Matrix._destinationMatrix = Matrix.MultiplicateBothMatrix(Matrix._matrixOne, Matrix._matrixTwo);
                 MovePageResultCalculation();
             };
             FindReverseMatrix.Click += (s, e) =>
             {
-                Matrix._temp = Matrix.ReverseMatrix(Matrix._matrixOne);
-                InputAndOutputDataToMatrix.OutputData(Matrix._temp, OutputData);
-
+                Matrix._destinationMatrix = Matrix.ReverseMatrix(Matrix._matrixOne);
                 MovePageResultCalculation();
             };
             
@@ -131,7 +121,6 @@ namespace MatrixOfCalculator.Forms
             else if (sizeFourToFour.Checked)
                 Navigation.MoveToPage(currentPage: HomeWindow, nextPage: InputDataToMatrixFourOnFour);
         }
-
         private void MovePageOperationMatrix()
         {
             if (CreateMatrix.BackColor.Name.StartsWith("ffc0ffc0"))
@@ -279,19 +268,18 @@ namespace MatrixOfCalculator.Forms
                 }
             }
         }
-
         private void MovePageResultCalculation()
         {
             if (InputField.Text != "")
             {
-                Matrix._temp = Matrix.MultiplicateNumberOnMatrix(Matrix._matrixOne, InputField.Text.CheckIntOrDefault());
-                InputAndOutputDataToMatrix.OutputData(Matrix._temp, OutputData);
+                Matrix._destinationMatrix = Matrix.MultiplicateNumberOnMatrix(Matrix._matrixOne, InputField.Text.CheckIntOrDefault());
+                InputAndOutputDataToMatrix.OutputData(Matrix._destinationMatrix, OutputData);
             }
 
             Next.Text = "Главная";
             Navigation.MoveToPage(currentPage: OperationMatrix, nextPage: ResultCalculation);
+            InputAndOutputDataToMatrix.OutputData(Matrix._destinationMatrix, OutputData);
         }
-
         private void MoveHomePage()
         {
             Next.Text = "Далее →";
@@ -309,15 +297,12 @@ namespace MatrixOfCalculator.Forms
             {
                 Navigation.MoveToPage(currentPage: InputDataToMatrixTwoOnTwo, nextPage: HomeWindow);
                 HideButton(Return);
-            } else if (InputDataToMatrixThreeOnThree.Visible)
-            {
+            }
+            else if (InputDataToMatrixThreeOnThree.Visible)
                 Navigation.MoveToPage(currentPage: InputDataToMatrixThreeOnThree, nextPage: HomeWindow);
-                HideButton(Return);
-            } else if (InputDataToMatrixFourOnFour.Visible)
-            {
+            else if (InputDataToMatrixFourOnFour.Visible)
                 Navigation.MoveToPage(currentPage: InputDataToMatrixFourOnFour, nextPage: HomeWindow);
-                HideButton(Return);
-            } else if (OperationMatrix.Visible)
+            else if (OperationMatrix.Visible)
             {
                 if (inHandle.Checked)
                 {
@@ -332,16 +317,12 @@ namespace MatrixOfCalculator.Forms
                 }
                 else
                     Navigation.MoveToPage(currentPage: OperationMatrix, nextPage: HomeWindow);
-
-                HideButton(Return);
-
             } else if (ResultCalculation.Visible)
             {
                 Next.Text = "Далее →";
                 Navigation.MoveToPage(currentPage: ResultCalculation, nextPage: OperationMatrix);
             }
         }
-
 
         private bool IsChooseOneMatrixAndHandleInput()
         {
