@@ -60,6 +60,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\UserInterface.cs" />
     <Compile Include="InputAndOutputDataToMatrix.cs" />
     <Compile Include="Classes\UtilityTools.cs" />
     <Compile Include="Matrix.cs" />

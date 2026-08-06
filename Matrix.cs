@@ -5,7 +5,7 @@ namespace MatrixOfCalculator
 {
     public class Matrix
     {
-        public static float[,] _matrixOne, _matrixTwo, _destinationMatrix;
+        public static float[,] matrixOne, matrixTwo, destinationMatrix;
 
         public static float[,] MultiplicateNumberOnMatrix(float[,] matrix, int multiplicate)
         {
@@ -18,7 +18,7 @@ namespace MatrixOfCalculator
 
         public static float[,] ReverseMatrix(float[,] sourceMatrix, int det = 0)
         {
-            _destinationMatrix = new float[sourceMatrix.GetLength(0), sourceMatrix.GetLength(1)];
+            destinationMatrix = new float[sourceMatrix.GetLength(0), sourceMatrix.GetLength(1)];
 
             if (sourceMatrix.Length == 4)
                 det = FindDeterminantTwoOnTwo(sourceMatrix);
@@ -30,14 +30,14 @@ namespace MatrixOfCalculator
             if (det == 0)
                 return sourceMatrix;
 
-            _destinationMatrix = FindMinorForMatrix(sourceMatrix);
-            FindAlgebraicAdditions(ref _destinationMatrix);
+            destinationMatrix = FindMinorForMatrix(sourceMatrix);
+            FindAlgebraicAdditions(ref destinationMatrix);
 
-            for (int x = 0; x < _destinationMatrix.GetLength(0); x++)
-                for (int y = 0; y < _destinationMatrix.GetLength(1); y++)
-                        _destinationMatrix[x, y] /= det;
+            for (int x = 0; x < destinationMatrix.GetLength(0); x++)
+                for (int y = 0; y < destinationMatrix.GetLength(1); y++)
+                        destinationMatrix[x, y] /= det;
 
-            return TransposeMatrix(_destinationMatrix);
+            return TransposeMatrix(destinationMatrix);
         }
 
         private static float[,] FindMinorForMatrix(float[,] matrix)
@@ -287,35 +287,35 @@ namespace MatrixOfCalculator
 
         public static float[,] TransposeMatrix(float[,] matrix)
         {
-            _destinationMatrix = new float[_matrixOne.GetLength(0), _matrixOne.GetLength(1)];
+            destinationMatrix = new float[matrixOne.GetLength(0), matrixOne.GetLength(1)];
 
             for (int x = 0; x < matrix.GetLength(0); x++)
                 for (int y = 0; y < matrix.GetLength(1); y++)
-                    _destinationMatrix[y, x] = matrix[x, y];
+                    destinationMatrix[y, x] = matrix[x, y];
 
-            return _destinationMatrix;
+            return destinationMatrix;
         }
 
         public static float[,] AdditionMatrix(float[,] matrixOne, float[,] matrixTwo)
         {
-            _destinationMatrix = new float[matrixOne.GetLength(0), matrixOne.GetLength(1)];
+            destinationMatrix = new float[matrixOne.GetLength(0), matrixOne.GetLength(1)];
 
             for (int x = 0; x < matrixOne.GetLength(0); x++)
                 for (int y = 0; y < matrixOne.GetLength(1); y++)
-                    _destinationMatrix[x, y] = matrixOne[x, y] + matrixTwo[x, y];
+                    destinationMatrix[x, y] = matrixOne[x, y] + matrixTwo[x, y];
 
-            return _destinationMatrix;
+            return destinationMatrix;
         }
 
         public static float[,] SubstractionMatrix(float[,] matrixOne, float[,] matrixTwo)
         {
-            _destinationMatrix = new float[matrixOne.GetLength(0), matrixOne.GetLength(1)];
+            destinationMatrix = new float[matrixOne.GetLength(0), matrixOne.GetLength(1)];
 
             for (int x = 0; x < matrixTwo.GetLength(0); x++)
                 for (int y = 0; y < matrixTwo.GetLength(1); y++)
-                    _destinationMatrix[x, y] = matrixTwo[x, y] - matrixOne[x, y];
+                    destinationMatrix[x, y] = matrixTwo[x, y] - matrixOne[x, y];
 
-            return _destinationMatrix;
+            return destinationMatrix;
         }
 
         public static float[,] MultiplicateBothMatrix(float[,] matrixOne, float[,] matrixTwo)

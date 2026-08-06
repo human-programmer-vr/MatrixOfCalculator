@@ -15,6 +15,11 @@ namespace MatrixOfCalculator.Classes
             button.BackColor = Color.White;
         }
 
+        public static bool CheckPressFromOtherButton(Button button)
+        {
+            return button.BackColor == Color.FromArgb(192, 255, 192) ? false : true;
+        }
+
         public static void SetMaxLengthFieldInput(int length, params TextBox[] inputs)
         {
             foreach (var input in inputs)
