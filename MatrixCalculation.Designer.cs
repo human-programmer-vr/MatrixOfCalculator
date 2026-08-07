@@ -90,7 +90,7 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.Return = new System.Windows.Forms.Button();
+            this.Revert = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.CloseWindow)).BeginInit();
             this.HomeWindow.SuspendLayout();
             this.InputDataToMatrixTwoOnTwo.SuspendLayout();
@@ -864,15 +864,15 @@
             // 
             // bBack
             // 
-            this.Return.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Return.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Return.Location = new System.Drawing.Point(464, 429);
-            this.Return.Name = "bBack";
-            this.Return.Size = new System.Drawing.Size(116, 36);
-            this.Return.TabIndex = 6;
-            this.Return.Text = "← Назад";
-            this.Return.UseVisualStyleBackColor = true;
-            this.Return.Visible = false;
+            this.Revert.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Revert.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Revert.Location = new System.Drawing.Point(464, 429);
+            this.Revert.Name = "bBack";
+            this.Revert.Size = new System.Drawing.Size(116, 36);
+            this.Revert.TabIndex = 6;
+            this.Revert.Text = "← Назад";
+            this.Revert.UseVisualStyleBackColor = true;
+            this.Revert.Visible = false;
             // 
             // MatrixCalculation
             // 
@@ -881,7 +881,7 @@
             this.ClientSize = new System.Drawing.Size(725, 488);
             this.Controls.Add(this.CloseWindow);
             this.Controls.Add(this.HomeWindow);
-            this.Controls.Add(this.Return);
+            this.Controls.Add(this.Revert);
             this.Controls.Add(this.Next);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -923,7 +923,7 @@
         private System.Windows.Forms.GroupBox HomeWindow;
         private System.Windows.Forms.GroupBox OperationMatrix;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button Return;
+        private System.Windows.Forms.Button Revert;
         private System.Windows.Forms.GroupBox ResultCalculation;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox OutputData;
