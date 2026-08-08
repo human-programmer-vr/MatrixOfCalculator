@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.Text;
+using System.Windows.Forms;
 
 namespace MatrixOfCalculator.Classes
 {
@@ -8,5 +9,11 @@ namespace MatrixOfCalculator.Classes
         public static void ShowButton(Button button) => button.Visible = true;
 
         public static void ChangeButtonNext(Button button, string message) => button.Text = message;
+
+        public static void ClearOutputWindow(TextBox window, StringBuilder builder)
+        {
+            window.Clear();
+            builder.Clear();
+        }
     }
 }

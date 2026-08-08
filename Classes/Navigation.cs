@@ -17,17 +17,5 @@ namespace MatrixOfCalculator.Forms
             hideElement.Visible = false;
             showElement.Visible = true;
         }
-
-        public static void SetFormAndCloseExist(GroupBox chooseDesign, params GroupBox[] currentDesign)
-        {
-            foreach (var window in currentDesign)
-                window.Visible = false;
-
-            if (currentDesign.Length > 0)
-                chooseDesign.Parent = currentDesign[0].Parent;
-
-            chooseDesign.Visible = true;
-            chooseDesign.BringToFront();
-        }
     }
 }

@@ -32,203 +32,9 @@ namespace MatrixOfCalculator
 
             destinationMatrix = FindMinorForMatrix(sourceMatrix);
             FindAlgebraicAdditions(ref destinationMatrix);
-
-            for (int x = 0; x < destinationMatrix.GetLength(0); x++)
-                for (int y = 0; y < destinationMatrix.GetLength(1); y++)
-                        destinationMatrix[x, y] /= det;
+            DivisionMatrixOnDeterminant(det);
 
             return TransposeMatrix(destinationMatrix);
-        }
-
-        private static float[,] FindMinorForMatrix(float[,] matrix)
-        {
-            float[,] temp = new float[matrix.GetLength(0), matrix.GetLength(1)];
-
-            if (matrix.Length == 4)
-                FindMinorForMatrixTwoOnTwo(matrix, ref temp);
-            else if (matrix.Length == 9)
-                FindMinorForMatrixThreeOnThree(matrix, ref temp);
-            else if (matrix.Length == 16)
-                FindMinorForMatrixFourOnFour(matrix, ref temp);
-
-            return temp;
-        }
-
-        private static float[,] FindAlgebraicAdditions(ref float[,] matrix)
-        {
-            for (int x = 0; x < matrix.GetLength(0); x++)
-                for (int y = 0; y < matrix.GetLength(1); y++)
-                    if ((x + y) % 2 != 0)
-                        matrix[x, y] *= -1;
-
-            return matrix;
-        }
-
-        private static float[,] FindMinorForMatrixTwoOnTwo(float[,] matrix, ref float[,] temp)
-        {
-            for (int x = matrix.GetLength(0) - 1, j = 0; x >= 0; x--, j++)
-                for (int y = matrix.GetLength(1) - 1, k = 0; y >= 0; y--, k++)
-                    temp[j, k] = matrix[x, y];
-
-            return temp;
-        }
-
-        private static float[,] FindMinorForMatrixThreeOnThree(float[,] matrix, ref float[,] temp)
-        {
-            temp = InputAndOutputDataToMatrix.HandleInput(matrix,
-            (matrix[1, 1] * matrix[2, 2]) - (matrix[1, 2] * matrix[2, 1]),
-            (matrix[1, 0] * matrix[2, 2]) - (matrix[2, 0] * matrix[1, 2]),
-            (matrix[1, 0] * matrix[2, 1]) - (matrix[1, 1] * matrix[2, 0]),     
-            (matrix[0, 1] * matrix[2, 2]) - (matrix[0, 2] * matrix[2, 1]),
-            (matrix[0, 0] * matrix[2, 2]) - (matrix[0, 2] * matrix[2, 0]),
-            (matrix[0, 0] * matrix[2, 1]) - (matrix[0, 1] * matrix[2, 0]),
-            (matrix[0, 1] * matrix[1, 2]) - (matrix[0, 2] * matrix[1, 1]),
-            (matrix[0, 0] * matrix[1, 2]) - (matrix[0, 2] * matrix[1, 0]),
-            (matrix[0, 0] * matrix[1, 1]) - (matrix[0, 1] * matrix[1, 0]));
-
-            return temp;
-        }
-
-        private static float[,] FindMinorForMatrixFourOnFour(float[,] matrix, ref float[,] temp)
-        {
-            return temp = new float[,] {
-                { 
-                    FindDeterminantThreeOnThree (
-                        new float[,]
-                        {
-                            { matrix[1, 1], matrix[1, 2], matrix[1, 3] }, 
-                            { matrix[2, 1], matrix[2, 2], matrix[2, 3] },
-                            { matrix[3, 1], matrix[3, 2], matrix[3, 3] }
-                        }
-                    ), 
-                    FindDeterminantThreeOnThree (
-                        new float[,]
-                        {
-                            { matrix[1, 0], matrix[1, 2], matrix[1, 3] },
-                            { matrix[2, 0], matrix[2, 2], matrix[2, 3] },
-                            { matrix[3, 0], matrix[3, 2], matrix[3, 3] }
-                        }
-                    ), 
-                    FindDeterminantThreeOnThree (
-                        new float[,]
-                        {
-                            { matrix[1, 0], matrix[1, 1], matrix[1, 3] },
-                            { matrix[2, 0], matrix[2, 1], matrix[2, 3] },
-                            { matrix[3, 0], matrix[3, 1], matrix[3, 3] }
-                        }
-                    ), 
-                    FindDeterminantThreeOnThree (
-                        new float[,]
-                        {
-                            { matrix[1, 0], matrix[1, 1], matrix[1, 2] },
-                            { matrix[2, 0], matrix[2, 1], matrix[2, 2] },
-                            { matrix[3, 0], matrix[3, 1], matrix[3, 2] }
-                        }
-                    )
-                },
-                { 
-                    FindDeterminantThreeOnThree (
-                        new float[,]
-                        { 
-                            { matrix[0, 1], matrix[0, 2], matrix[0, 3] },
-                            { matrix[2, 1], matrix[2, 2], matrix[2, 3] },
-                            { matrix[3, 1], matrix[3, 2], matrix[3, 3] }
-                        }
-                    ), 
-                    FindDeterminantThreeOnThree (
-                        new float[,]
-                        {
-                           { matrix[0, 0], matrix[0, 2], matrix[0, 3] },
-                           { matrix[2, 0], matrix[2, 2], matrix[2, 3] },
-                           { matrix[3, 0], matrix[3, 2], matrix[3, 3] }
-                       }
-                    ), 
-                    FindDeterminantThreeOnThree (
-                        new float[,]
-                        {
-                            { matrix[0, 0], matrix[0, 1], matrix[0, 3] },
-                            { matrix[2, 0], matrix[2, 1], matrix[2, 3] },
-                            { matrix[3, 0], matrix[3, 1], matrix[3, 3] }
-                        }
-                    ), 
-                    FindDeterminantThreeOnThree (
-                        new float[,]
-                        {
-                            { matrix[0, 0], matrix[0, 1], matrix[0, 2] },
-                            { matrix[2, 0], matrix[2, 1], matrix[2, 2] },
-                            { matrix[3, 0], matrix[3, 1], matrix[3, 2] }
-                        }
-                    )
-                },
-                { 
-                    FindDeterminantThreeOnThree (
-                        new float[,]
-                        {
-                            { matrix[0, 1], matrix[0, 2], matrix[0, 3] },
-                            { matrix[1, 1], matrix[1, 2], matrix[1, 3] },
-                            { matrix[3, 1], matrix[3, 2], matrix[3, 3] }
-                        }
-                    ), 
-                    FindDeterminantThreeOnThree (
-                        new float[,]
-                        {
-                            { matrix[0, 0], matrix[0, 2], matrix[0, 3] },
-                            { matrix[1, 0], matrix[1, 2], matrix[1, 3] },
-                            { matrix[3, 0], matrix[3, 2], matrix[3, 3] }
-                        }
-                    ), 
-                    FindDeterminantThreeOnThree (
-                        new float[,]
-                        {
-                            { matrix[0, 0], matrix[0, 1], matrix[0, 3] },
-                            { matrix[1, 0], matrix[1, 1], matrix[1, 3] },
-                            { matrix[3, 0], matrix[3, 1], matrix[3, 3] }
-                        }
-                    ), 
-                    FindDeterminantThreeOnThree (
-                        new float[,]
-                        {
-                            { matrix[0, 0], matrix[0, 1], matrix[0, 2] },
-                            { matrix[1, 0], matrix[1, 1], matrix[1, 2] },
-                            { matrix[3, 0], matrix[3, 1], matrix[3, 2] }
-                        }
-                    ) 
-                },    
-                { 
-                    FindDeterminantThreeOnThree (
-                        new float[,]
-                        {
-                            { matrix[0, 1], matrix[0, 2], matrix[0, 3] },
-                            { matrix[1, 1], matrix[1, 2], matrix[1, 3] },
-                            { matrix[2, 1], matrix[2, 2], matrix[2, 3] }
-                        }
-                    ), 
-                    FindDeterminantThreeOnThree (
-                        new float[,]
-                        {
-                            {matrix[0, 0], matrix[0, 2], matrix[0, 3] },
-                            {matrix[1, 0], matrix[1, 2], matrix[1, 3] },
-                            {matrix[2, 0], matrix[2, 2], matrix[2, 3] }
-                        }
-                    ), 
-                    FindDeterminantThreeOnThree (
-                        new float[,]
-                        {
-                            {matrix[0, 0], matrix[0, 1], matrix[0, 3] },
-                            {matrix[1, 0], matrix[1, 1], matrix[1, 3] },
-                            {matrix[2, 0], matrix[2, 1], matrix[2, 3] }
-                        }
-                    ), 
-                    FindDeterminantThreeOnThree (
-                        new float[,]
-                        {
-                            { matrix[0, 0], matrix[0, 1], matrix[0, 2] },
-                            { matrix[1, 0], matrix[1, 1], matrix[1, 2] },
-                            { matrix[2, 0], matrix[2, 1], matrix[2, 2] }
-                        }
-                        )
-                },
-            };
         }
 
         private static int FindDeterminantTwoOnTwo(float[,] matrix)
@@ -249,7 +55,7 @@ namespace MatrixOfCalculator
 
         private static int FindDeterminantFourOnFour(float[,] matrix)
         {
-            return (int) 
+            return (int)
                 (
                 matrix[0, 0] * Math.Pow(-1, 2) * FindDeterminantThreeOnThree(
                     new float[,]
@@ -257,7 +63,7 @@ namespace MatrixOfCalculator
                         { matrix[1, 1], matrix[1, 2], matrix[1, 3] },
                         { matrix[2, 1], matrix[2, 2], matrix[2, 3] },
                         { matrix[3, 1], matrix[3, 2], matrix[3, 3] },
-                    }) + 
+                    }) +
                 matrix[1, 0] * Math.Pow(-1, 3) * FindDeterminantThreeOnThree(
                         new float[,]
                         {
@@ -265,7 +71,7 @@ namespace MatrixOfCalculator
                             { matrix[2, 1], matrix[2, 2], matrix[2, 3] },
                             { matrix[3, 1], matrix[3, 2], matrix[3, 3] },
                         }
-                    ) + 
+                    ) +
                 matrix[2, 0] * Math.Pow(-1, 4) * FindDeterminantThreeOnThree(
                         new float[,]
                         {
@@ -283,6 +89,204 @@ namespace MatrixOfCalculator
                         }
                     )
                 );
+        }
+
+        private static float[,] FindMinorForMatrix(float[,] matrix)
+        {
+            float[,] temp = new float[matrix.GetLength(0), matrix.GetLength(1)];
+
+            if (matrix.Length == 4)
+                FindMinorForMatrixTwoOnTwo(matrix, ref temp);
+            else if (matrix.Length == 9)
+                FindMinorForMatrixThreeOnThree(matrix, ref temp);
+            else if (matrix.Length == 16)
+                FindMinorForMatrixFourOnFour(matrix, ref temp);
+
+            return temp;
+        }
+
+        private static float[,] FindMinorForMatrixTwoOnTwo(float[,] matrix, ref float[,] temp)
+        {
+            for (int x = matrix.GetLength(0) - 1, j = 0; x >= 0; x--, j++)
+                for (int y = matrix.GetLength(1) - 1, k = 0; y >= 0; y--, k++)
+                    temp[j, k] = matrix[x, y];
+
+            return temp;
+        }
+
+        private static float[,] FindMinorForMatrixThreeOnThree(float[,] matrix, ref float[,] temp)
+        {
+            temp = InputAndOutputDataToMatrix.HandleInput(matrix,
+                (matrix[1, 1] * matrix[2, 2]) - (matrix[1, 2] * matrix[2, 1]),
+                (matrix[1, 0] * matrix[2, 2]) - (matrix[2, 0] * matrix[1, 2]),
+                (matrix[1, 0] * matrix[2, 1]) - (matrix[1, 1] * matrix[2, 0]),
+                (matrix[0, 1] * matrix[2, 2]) - (matrix[0, 2] * matrix[2, 1]),
+                (matrix[0, 0] * matrix[2, 2]) - (matrix[0, 2] * matrix[2, 0]),
+                (matrix[0, 0] * matrix[2, 1]) - (matrix[0, 1] * matrix[2, 0]),
+                (matrix[0, 1] * matrix[1, 2]) - (matrix[0, 2] * matrix[1, 1]),
+                (matrix[0, 0] * matrix[1, 2]) - (matrix[0, 2] * matrix[1, 0]),
+                (matrix[0, 0] * matrix[1, 1]) - (matrix[0, 1] * matrix[1, 0]));
+
+            return temp;
+        }
+
+        private static float[,] FindMinorForMatrixFourOnFour(float[,] matrix, ref float[,] temp)
+        {
+            return temp = new float[,] {
+                {
+                    FindDeterminantThreeOnThree (
+                        new float[,]
+                        {
+                            { matrix[1, 1], matrix[1, 2], matrix[1, 3] },
+                            { matrix[2, 1], matrix[2, 2], matrix[2, 3] },
+                            { matrix[3, 1], matrix[3, 2], matrix[3, 3] }
+                        }
+                    ),
+                    FindDeterminantThreeOnThree (
+                        new float[,]
+                        {
+                            { matrix[1, 0], matrix[1, 2], matrix[1, 3] },
+                            { matrix[2, 0], matrix[2, 2], matrix[2, 3] },
+                            { matrix[3, 0], matrix[3, 2], matrix[3, 3] }
+                        }
+                    ),
+                    FindDeterminantThreeOnThree (
+                        new float[,]
+                        {
+                            { matrix[1, 0], matrix[1, 1], matrix[1, 3] },
+                            { matrix[2, 0], matrix[2, 1], matrix[2, 3] },
+                            { matrix[3, 0], matrix[3, 1], matrix[3, 3] }
+                        }
+                    ),
+                    FindDeterminantThreeOnThree (
+                        new float[,]
+                        {
+                            { matrix[1, 0], matrix[1, 1], matrix[1, 2] },
+                            { matrix[2, 0], matrix[2, 1], matrix[2, 2] },
+                            { matrix[3, 0], matrix[3, 1], matrix[3, 2] }
+                        }
+                    )
+                },
+                {
+                    FindDeterminantThreeOnThree (
+                        new float[,]
+                        {
+                            { matrix[0, 1], matrix[0, 2], matrix[0, 3] },
+                            { matrix[2, 1], matrix[2, 2], matrix[2, 3] },
+                            { matrix[3, 1], matrix[3, 2], matrix[3, 3] }
+                        }
+                    ),
+                    FindDeterminantThreeOnThree (
+                        new float[,]
+                        {
+                           { matrix[0, 0], matrix[0, 2], matrix[0, 3] },
+                           { matrix[2, 0], matrix[2, 2], matrix[2, 3] },
+                           { matrix[3, 0], matrix[3, 2], matrix[3, 3] }
+                       }
+                    ),
+                    FindDeterminantThreeOnThree (
+                        new float[,]
+                        {
+                            { matrix[0, 0], matrix[0, 1], matrix[0, 3] },
+                            { matrix[2, 0], matrix[2, 1], matrix[2, 3] },
+                            { matrix[3, 0], matrix[3, 1], matrix[3, 3] }
+                        }
+                    ),
+                    FindDeterminantThreeOnThree (
+                        new float[,]
+                        {
+                            { matrix[0, 0], matrix[0, 1], matrix[0, 2] },
+                            { matrix[2, 0], matrix[2, 1], matrix[2, 2] },
+                            { matrix[3, 0], matrix[3, 1], matrix[3, 2] }
+                        }
+                    )
+                },
+                {
+                    FindDeterminantThreeOnThree (
+                        new float[,]
+                        {
+                            { matrix[0, 1], matrix[0, 2], matrix[0, 3] },
+                            { matrix[1, 1], matrix[1, 2], matrix[1, 3] },
+                            { matrix[3, 1], matrix[3, 2], matrix[3, 3] }
+                        }
+                    ),
+                    FindDeterminantThreeOnThree (
+                        new float[,]
+                        {
+                            { matrix[0, 0], matrix[0, 2], matrix[0, 3] },
+                            { matrix[1, 0], matrix[1, 2], matrix[1, 3] },
+                            { matrix[3, 0], matrix[3, 2], matrix[3, 3] }
+                        }
+                    ),
+                    FindDeterminantThreeOnThree (
+                        new float[,]
+                        {
+                            { matrix[0, 0], matrix[0, 1], matrix[0, 3] },
+                            { matrix[1, 0], matrix[1, 1], matrix[1, 3] },
+                            { matrix[3, 0], matrix[3, 1], matrix[3, 3] }
+                        }
+                    ),
+                    FindDeterminantThreeOnThree (
+                        new float[,]
+                        {
+                            { matrix[0, 0], matrix[0, 1], matrix[0, 2] },
+                            { matrix[1, 0], matrix[1, 1], matrix[1, 2] },
+                            { matrix[3, 0], matrix[3, 1], matrix[3, 2] }
+                        }
+                    )
+                },
+                {
+                    FindDeterminantThreeOnThree (
+                        new float[,]
+                        {
+                            { matrix[0, 1], matrix[0, 2], matrix[0, 3] },
+                            { matrix[1, 1], matrix[1, 2], matrix[1, 3] },
+                            { matrix[2, 1], matrix[2, 2], matrix[2, 3] }
+                        }
+                    ),
+                    FindDeterminantThreeOnThree (
+                        new float[,]
+                        {
+                            {matrix[0, 0], matrix[0, 2], matrix[0, 3] },
+                            {matrix[1, 0], matrix[1, 2], matrix[1, 3] },
+                            {matrix[2, 0], matrix[2, 2], matrix[2, 3] }
+                        }
+                    ),
+                    FindDeterminantThreeOnThree (
+                        new float[,]
+                        {
+                            {matrix[0, 0], matrix[0, 1], matrix[0, 3] },
+                            {matrix[1, 0], matrix[1, 1], matrix[1, 3] },
+                            {matrix[2, 0], matrix[2, 1], matrix[2, 3] }
+                        }
+                    ),
+                    FindDeterminantThreeOnThree (
+                        new float[,]
+                        {
+                            { matrix[0, 0], matrix[0, 1], matrix[0, 2] },
+                            { matrix[1, 0], matrix[1, 1], matrix[1, 2] },
+                            { matrix[2, 0], matrix[2, 1], matrix[2, 2] }
+                        }
+                        )
+                },
+            };
+        }
+
+        private static float[,] FindAlgebraicAdditions(ref float[,] matrix)
+        {
+            for (int x = 0; x < matrix.GetLength(0); x++)
+                for (int y = 0; y < matrix.GetLength(1); y++)
+                    if ((x + y) % 2 != 0)
+                        matrix[x, y] *= -1;
+
+            return matrix;
+        }
+
+        private static void DivisionMatrixOnDeterminant(int det)
+        {
+            for (int x = 0; x < destinationMatrix.GetLength(0); x++)
+                for (int y = 0; y < destinationMatrix.GetLength(1); y++)
+                    destinationMatrix[x, y] /= det;
         }
 
         public static float[,] TransposeMatrix(float[,] matrix)
@@ -320,16 +324,9 @@ namespace MatrixOfCalculator
 
         public static float[,] MultiplicateBothMatrix(float[,] matrixOne, float[,] matrixTwo)
         {
-            if (matrixOne.Length == 4)
-                return MultiplyElementsMatrixTwoOnTwo(matrixOne, matrixTwo);
-
-            if (matrixOne.Length == 9)
-                return MultiplyMatrixThreeOnThree(matrixOne, matrixTwo);
-
-            if (matrixOne.Length == 16)
-                return MultiplyMatrixFourOnFour(matrixOne, matrixTwo);
-
-            return null;
+            return matrixOne.Length == 4 ? MultiplyElementsMatrixTwoOnTwo(matrixOne, matrixTwo) :
+                matrixOne.Length == 9 ? MultiplyMatrixThreeOnThree(matrixOne, matrixTwo) :
+                matrixOne.Length == 16 ? MultiplyMatrixFourOnFour(matrixOne, matrixTwo) : null;
         }
 
         private static float[,] MultiplyElementsMatrixTwoOnTwo(float[,] matrixOne, float[,] matrixTwo)

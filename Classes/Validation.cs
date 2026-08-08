@@ -12,12 +12,7 @@ namespace MatrixOfCalculator.Classes
 
         private static int CheckLimitRangeValue(int number)
         {
-            if (number > 30)
-                number = 30;
-            else if (number < -30)
-                number = -30;
-
-            return number;
+            return number > 30 ? 30 : number < -30 ? -30 : number;
         }
 
         public static void OnlyNumbers(object sender, KeyPressEventArgs e)

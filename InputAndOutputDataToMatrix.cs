@@ -9,11 +9,11 @@ namespace MatrixOfCalculator.Classes
         private static Random _rand = new Random();
         private static StringBuilder _stringBuilder = new StringBuilder();
 
-        public static float[,] HandleInput(float[,] matrix, params float[] input)
+        public static float[,] HandleInput(float[,] matrix, params float[] data)
         {
             for (int x = 0, index = 0; x < matrix.GetLength(0); x++)
                 for (int y = 0; y < matrix.GetLength(1); y++, index++)
-                    matrix[x, y] = input[index];
+                    matrix[x, y] = data[index];
 
             return matrix;
         }
@@ -35,8 +35,7 @@ namespace MatrixOfCalculator.Classes
 
         public static void OutputData(float[,] matrix, TextBox output)
         {
-            output.Clear();
-            _stringBuilder.Clear();
+            UserInterface.ClearOutputWindow(output, _stringBuilder);
 
             for (int x = 0; x < matrix.GetLength(0); x++)
             {
